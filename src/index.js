@@ -12,6 +12,9 @@ function PM25ConcentrationFromAQI(AQI) {
     BPh = 500.4;
     BPl = 350.5;
   }
-  console.log(BPh);
+
+  return (
+    (AQI + ((Ih - Il) / (BPh - BPl)) * BPl - Il) / ((Ih - Il) / (BPh - BPl))
+  );
 }
-PM25ConcentrationFromAQI(450);
+console.log(PM25ConcentrationFromAQI(401));
