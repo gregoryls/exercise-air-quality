@@ -1,0 +1,2 @@
+- cigarette particulate matter is almost always below 1 micron, well within the 2.5 micron boundary
+- total particulate matter in one cigarette is 15.5-41.5mg
