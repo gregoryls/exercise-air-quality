@@ -1,2 +1,3 @@
 - cigarette particulate matter is almost always below 1 micron, well within the 2.5 micron boundary
 - total particulate matter in one cigarette is 15.5-41.5mg
+- minute volume may range from 10 L/min at rest, 25-40 light exercise, 65 medium, 100 hard (all the way up to 180:130 male:female max)...needs more research.
