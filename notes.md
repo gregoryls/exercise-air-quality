@@ -8,6 +8,15 @@
 
   - Environmental Tobacco Smoke: Measuring Exposures and Assessing Health Effects. Washington, D.C.: National Academies Press, 1986. https://doi.org/10.17226/943.
 
-- minute volume may range from 10 L/min at rest, 25-40 light exercise, 65 medium, 100 hard (all the way up to 180:130 male:female max)...needs more research.
+- minute volume may range from 10 L/min at rest, 25-40 light exercise, 65 medium, 100 hard
+
+  - Samet, J. M., W. E. Lambert, D. S. James, C. M. Mermier, and T. W. Chick. “Assessment of Heart Rate as a Predictor of Ventilation.” Research Report (Health Effects Institute), no. 59 (May 1993): 19–55; discussion 57-69.
+
+- Women have approximately 75% of the potential minute volume compared to men due mostly to lung size.
+
+  - Guenette, Jordan A., Jonathan D. Witt, Donald C. McKenzie, Jeremy D. Road, and A. William Sheel. “Respiratory Mechanics during Exercise in Endurance-Trained Men and Women: Respiratory Mechanics.” The Journal of Physiology 581, no. 3 (June 15, 2007): 1309–22. https://doi.org/10.1113/jphysiol.2006.126466.
+  - Samet, J. M., W. E. Lambert, D. S. James, C. M. Mermier, and T. W. Chick. “Assessment of Heart Rate as a Predictor of Ventilation.” Research Report (Health Effects Institute), no. 59 (May 1993): 19–55; discussion 57-69.
+  - Vogiatzis, Ioannis, Andrea Aliverti, Spyretta Golemati, Olga Georgiadou, Antonella LoMauro, Epaminondas Kosmas, Emmanouil Kastanakis, and Charis Roussos. “Respiratory Kinematics by Optoelectronic Plethysmography during Exercise in Men and Women.” European Journal of Applied Physiology 93, no. 5–6 (March 2005): 581–87. https://doi.org/10.1007/s00421-004-1249-4.
+
 - minute volume (MV) can be estimated from heartrate (HR) MV=exp(1.16 + 0.021\*HR) which is within error of experimental data
   - Cruz, Ramon, Danilo L. Alves, Eduardo Rumenig, Renata Gonçalves, Edson Degaki, Leonardo Pasqua, Sarah Koch, Adriano E. Lima-Silva, Michael S. Koehle, and Romulo Bertuzzi. “Estimation of Minute Ventilation by Heart Rate for Field Exercise Studies.” Scientific Reports 10, no. 1 (January 29, 2020): 1423. https://doi.org/10.1038/s41598-020-58253-7.
