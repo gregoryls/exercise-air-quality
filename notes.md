@@ -5,6 +5,9 @@
   - Ishizu, Y., K. Ohta, and T. Okada. “The Effect of Moisture on the Growth of Cigarette Smoke Particles.” Beiträge Zur Tabakforschung / Contributions to Tobacco Research 10, no. 3 (January 1, 1980). https://doi.org/10.2478/cttr-2013-0486.
 
 - total particulate matter in one cigarette is 15.5-41.5mg
+
+  - Environmental Tobacco Smoke: Measuring Exposures and Assessing Health Effects. Washington, D.C.: National Academies Press, 1986. https://doi.org/10.17226/943.
+
 - minute volume may range from 10 L/min at rest, 25-40 light exercise, 65 medium, 100 hard (all the way up to 180:130 male:female max)...needs more research.
 - minute volume (MV) can be estimated from heartrate (HR) MV=exp(1.16 + 0.021\*HR) which is within error of experimental data
   - Cruz, Ramon, Danilo L. Alves, Eduardo Rumenig, Renata Gonçalves, Edson Degaki, Leonardo Pasqua, Sarah Koch, Adriano E. Lima-Silva, Michael S. Koehle, and Romulo Bertuzzi. “Estimation of Minute Ventilation by Heart Rate for Field Exercise Studies.” Scientific Reports 10, no. 1 (January 29, 2020): 1423. https://doi.org/10.1038/s41598-020-58253-7.
