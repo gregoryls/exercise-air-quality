@@ -1,3 +1,4 @@
+import "./style.css";
 import calculateMinuteVolumeFromHeartRate, {
   PM25ConcentrationFromAQI,
 } from "./math";
