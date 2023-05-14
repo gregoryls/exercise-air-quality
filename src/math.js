@@ -2,7 +2,10 @@
 // PM2.5 = Particulate Matter 2.5 micrometer particles
 // Ve = Minute Volume, the amount of air breathed usually Liters/minute
 
-export default function calculateMinuteVolumeFromHeartRate(heartrate) {}
+export default function calculateMinuteVolumeFromHeartRate(heartrate) {
+  const Ve = Math.exp(1.162 + 0.021 * heartrate);
+  return Ve;
+}
 
 export function PM25ConcentrationFromAQI(AQI) {
   let Ih;
