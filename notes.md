@@ -19,4 +19,8 @@
   - Vogiatzis, Ioannis, Andrea Aliverti, Spyretta Golemati, Olga Georgiadou, Antonella LoMauro, Epaminondas Kosmas, Emmanouil Kastanakis, and Charis Roussos. “Respiratory Kinematics by Optoelectronic Plethysmography during Exercise in Men and Women.” European Journal of Applied Physiology 93, no. 5–6 (March 2005): 581–87. https://doi.org/10.1007/s00421-004-1249-4.
 
 - minute volume (MV) can be estimated from heartrate (HR) MV=exp(1.16 + 0.021\*HR) which is within error of experimental data
+
   - Cruz, Ramon, Danilo L. Alves, Eduardo Rumenig, Renata Gonçalves, Edson Degaki, Leonardo Pasqua, Sarah Koch, Adriano E. Lima-Silva, Michael S. Koehle, and Romulo Bertuzzi. “Estimation of Minute Ventilation by Heart Rate for Field Exercise Studies.” Scientific Reports 10, no. 1 (January 29, 2020): 1423. https://doi.org/10.1038/s41598-020-58253-7.
+
+- health effect method for measuring cigarette to AQI impact
+  - https://berkeleyearth.org/air-pollution-and-cigarette-equivalence/
