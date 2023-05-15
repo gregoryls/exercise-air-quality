@@ -8,6 +8,10 @@
 
   - Environmental Tobacco Smoke: Measuring Exposures and Assessing Health Effects. Washington, D.C.: National Academies Press, 1986. https://doi.org/10.17226/943.
 
+- source for average cigarette having 12mg of PM2.5
+
+  - Pope, C. Arden, Richard T. Burnett, Michelle C. Turner, Aaron Cohen, Daniel Krewski, Michael Jerrett, Susan M. Gapstur, and Michael J. Thun. “Lung Cancer and Cardiovascular Disease Mortality Associated with Ambient Air Pollution and Cigarette Smoke: Shape of the Exposure–Response Relationships.” Environmental Health Perspectives 119, no. 11 (November 2011): 1616–21. https://doi.org/10.1289/ehp.1103639.
+
 - minute volume may range from 10 L/min at rest, 25-40 light exercise, 65 medium, 100 hard
 
   - Samet, J. M., W. E. Lambert, D. S. James, C. M. Mermier, and T. W. Chick. “Assessment of Heart Rate as a Predictor of Ventilation.” Research Report (Health Effects Institute), no. 59 (May 1993): 19–55; discussion 57-69.
@@ -24,3 +28,7 @@
 
 - health effect method for measuring cigarette to AQI impact
   - https://berkeleyearth.org/air-pollution-and-cigarette-equivalence/
+
+https://www.myhealthbeijing.com/china-public-health/air-pollution-or-smoking-which-is-worse-a-letter-from-dr-pope/
+
+https://www.myhealthbeijing.com/china-public-health/a-day-in-beijing-is-like-smoking-only-one-sixth-of-a-cigarette-its-almost-disappointing/
