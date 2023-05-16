@@ -24,3 +24,8 @@ export function PM25ConcentrationFromAQI(AQI) {
     (AQI + ((Ih - Il) / (BPh - BPl)) * BPl - Il) / ((Ih - Il) / (BPh - BPl))
   );
 }
+
+export function calculateVolumeAirBreathed(minuteVentilation, minutes) {
+  const volume = minuteVentilation * minutes;
+  return volume;
+}
