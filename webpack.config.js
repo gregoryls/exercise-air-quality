@@ -17,6 +17,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Excersize AQI",
       minify: false,
+      template: "./src/index.html",
     }),
   ],
   module: {
