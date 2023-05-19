@@ -10,3 +10,8 @@ console.log(calculateMinuteVolumeFromHeartRate(60));
 // TODO look up more about indoor vs outdoor smoking
 // TODO Arden Pope bibliography
 // TODO html template
+
+const submitButton = document.getElementById("submitData");
+submitButton.addEventListener("click", () => {
+  console.log("test submit");
+});
