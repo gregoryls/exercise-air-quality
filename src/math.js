@@ -37,3 +37,8 @@ export function calculatePM25MassBreathed(concentration, volume) {
   const PM25Mass = concentration * volume;
   return PM25Mass;
 }
+
+// export function getUserHeartRate() {
+//   const userInput = document.getElementById("userHeartRate");
+//   return userInput.value;
+// }
