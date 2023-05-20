@@ -4,7 +4,7 @@
 
 // TODO consider wrapping many exports into one exported iife
 
-export default function calculateMinuteVolumeFromHeartRate(heartrate) {
+export function calculateMinuteVolumeFromHeartRate(heartrate) {
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartrate);
   return minuteVentilation;
 }
