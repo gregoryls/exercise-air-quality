@@ -4,8 +4,8 @@
 
 // TODO consider wrapping many exports into one exported iife
 
-export function calculateMinuteVolumeFromHeartRate(heartrate) {
-  const minuteVentilation = Math.exp(1.162 + 0.021 * heartrate);
+export function calculateMinuteVolumeFromHeartRate(heartRate) {
+  const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
   return minuteVentilation;
 }
 
@@ -47,3 +47,7 @@ export function getUserRestingHeartRate() {
   const userInput = document.getElementById("userHeartRate");
   return userInput.value;
 }
+
+// export function calculateUserPM25Mass (heartRate,AQI){
+
+// }
