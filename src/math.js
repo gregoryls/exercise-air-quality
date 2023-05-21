@@ -22,6 +22,8 @@ export function PM25ConcentrationFromAQI(AQI) {
     BPl = 350.5;
   }
 
+  // TODO finish filling in constants for different AQI levels
+
   return (
     (AQI + ((Ih - Il) / (BPh - BPl)) * BPl - Il) / ((Ih - Il) / (BPh - BPl))
   );
@@ -48,6 +50,18 @@ export function getUserRestingHeartRate() {
   return userInput.value;
 }
 
-// export function calculateUserPM25Mass (heartRate,AQI){
-
-// }
+export function calculateUserPM25Mass(heartRate, AQI, minutes) {
+  // 1440 minutes in a day
+  const userMinuteVolume = calculateMinuteVolumeFromHeartRate(heartRate);
+  const userVolumeBreathed = calculateVolumeAirBreathed(
+    userMinuteVolume,
+    minutes
+  );
+  const PM25Concentration = PM25ConcentrationFromAQI(AQI);
+  // TODO needs unit conversion
+  const userPM25Mass = calculatePM25MassBreathed(
+    PM25Concentration,
+    userVolumeBreathed
+  );
+  return userPM25Mass;
+}
