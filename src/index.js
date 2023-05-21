@@ -12,4 +12,5 @@ console.log(utils.calculateMinuteVolumeFromHeartRate(60));
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
   console.log(utils.getUserRestingHeartRate());
+  console.log(utils.getUserAQI());
 });
