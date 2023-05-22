@@ -4,7 +4,7 @@
 
 // TODO consider wrapping many exports into one exported iife
 
-export function calculateMinuteVolumeFromHeartRate(heartRate) {
+export function calculateMinuteVentilationFromHeartRate(heartRate) {
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
 
   // convert standard Liters/minute units to m^3/minute to match with standard pm2.5 concentration units
@@ -57,7 +57,7 @@ export function calculateUserPM25Mass(heartRate, AQI, minutes) {
   // TODO change to user data functions after testing
 
   // 1440 minutes in a day
-  const userMinuteVolume = calculateMinuteVolumeFromHeartRate(heartRate);
+  const userMinuteVolume = calculateMinuteVentilationFromHeartRate(heartRate);
   const userVolumeBreathed = calculateVolumeAirBreathed(
     userMinuteVolume,
     minutes
