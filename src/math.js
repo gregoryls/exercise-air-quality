@@ -6,7 +6,10 @@
 
 export function calculateMinuteVolumeFromHeartRate(heartRate) {
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
-  return minuteVentilation;
+
+  // convert standard Liters/minute units to m^3/minute to match with standard pm2.5 concentration units
+  const minuteVentilationM3 = minuteVentilation / 1000;
+  return minuteVentilationM3;
 }
 
 export function PM25ConcentrationFromAQI(AQI) {
@@ -51,6 +54,8 @@ export function getUserRestingHeartRate() {
 }
 
 export function calculateUserPM25Mass(heartRate, AQI, minutes) {
+  // TODO change to user data functions after testing
+
   // 1440 minutes in a day
   const userMinuteVolume = calculateMinuteVolumeFromHeartRate(heartRate);
   const userVolumeBreathed = calculateVolumeAirBreathed(
