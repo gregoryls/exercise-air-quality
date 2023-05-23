@@ -87,7 +87,7 @@ export function getUserAQI() {
 
 export function getUserRestingHeartRate() {
   const userInput = document.getElementById("userHeartRate");
-  return userInput.value;
+  return Number(userInput.value);
 }
 
 export function calculateUserPM25Mass(minutes) {
