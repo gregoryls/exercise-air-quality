@@ -18,35 +18,11 @@ export function PM25ConcentrationFromAQI(AQI) {
   let BPh;
   let BPl;
 
-  if (AQI >= 401) {
-    Ih = 500;
-    Il = 401;
-    BPh = 500.4;
-    BPl = 350.5;
-  }
-  if (AQI >= 301) {
-    Ih = 400;
-    Il = 301;
-    BPh = 350.4;
-    BPl = 250.5;
-  }
-  if (AQI >= 201) {
-    Ih = 300;
-    Il = 201;
-    BPh = 250.4;
-    BPl = 150.5;
-  }
-  if (AQI >= 151) {
-    Ih = 200;
-    Il = 151;
-    BPh = 150.4;
-    BPl = 55.5;
-  }
-  if (AQI >= 101) {
-    Ih = 150;
-    Il = 101;
-    BPh = 55.4;
-    BPl = 35.5;
+  if (AQI >= 0) {
+    Ih = 50;
+    Il = 0;
+    BPh = 12;
+    BPl = 0;
   }
   if (AQI >= 51) {
     Ih = 10;
@@ -54,11 +30,35 @@ export function PM25ConcentrationFromAQI(AQI) {
     BPh = 35.4;
     BPl = 12.1;
   }
-  if (AQI >= 0) {
-    Ih = 50;
-    Il = 0;
-    BPh = 12;
-    BPl = 0;
+  if (AQI >= 101) {
+    Ih = 150;
+    Il = 101;
+    BPh = 55.4;
+    BPl = 35.5;
+  }
+  if (AQI >= 151) {
+    Ih = 200;
+    Il = 151;
+    BPh = 150.4;
+    BPl = 55.5;
+  }
+  if (AQI >= 201) {
+    Ih = 300;
+    Il = 201;
+    BPh = 250.4;
+    BPl = 150.5;
+  }
+  if (AQI >= 301) {
+    Ih = 400;
+    Il = 301;
+    BPh = 350.4;
+    BPl = 250.5;
+  }
+  if (AQI >= 401) {
+    Ih = 500;
+    Il = 401;
+    BPh = 500.4;
+    BPl = 350.5;
   }
 
   // TODO finish filling in constants for different AQI levels
@@ -69,6 +69,7 @@ export function PM25ConcentrationFromAQI(AQI) {
 }
 
 export function calculateVolumeAirBreathed(minuteVentilation, minutes) {
+  // units in m^3, based on minute ventilation function
   const volume = minuteVentilation * minutes;
   return volume;
 }
@@ -89,17 +90,19 @@ export function getUserRestingHeartRate() {
   return userInput.value;
 }
 
-export function calculateUserPM25Mass(heartRate, AQI, minutes) {
+export function calculateUserPM25Mass(minutes) {
   // TODO change to user data functions after testing
+  // final unit is in micrograms
 
   // 1440 minutes in a day
-  const userMinuteVolume = calculateMinuteVentilationFromHeartRate(heartRate);
+  const userMinuteVolume = calculateMinuteVentilationFromHeartRate(
+    getUserRestingHeartRate()
+  );
   const userVolumeBreathed = calculateVolumeAirBreathed(
     userMinuteVolume,
     minutes
   );
-  const PM25Concentration = PM25ConcentrationFromAQI(AQI);
-  // TODO needs unit conversion
+  const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
   const userPM25Mass = calculatePM25MassBreathed(
     PM25Concentration,
     userVolumeBreathed
