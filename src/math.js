@@ -25,7 +25,7 @@ export function PM25ConcentrationFromAQI(AQI) {
     BPl = 0;
   }
   if (AQI >= 51) {
-    Ih = 10;
+    Ih = 100;
     Il = 51;
     BPh = 35.4;
     BPl = 12.1;
