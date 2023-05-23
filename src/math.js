@@ -82,7 +82,7 @@ export function calculatePM25MassBreathed(concentration, volume) {
 
 export function getUserAQI() {
   const userAQI = document.getElementById("userAQI");
-  return userAQI.value;
+  return Number(userAQI.value);
 }
 
 export function getUserRestingHeartRate() {

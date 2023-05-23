@@ -15,5 +15,5 @@ submitButton.addEventListener("click", () => {
   console.log(utils.getUserRestingHeartRate());
   console.log(utils.getUserAQI());
   console.log(utils.PM25ConcentrationFromAQI(100));
-  console.log(utils.calculateUserPM25Mass(1440) / 12000);
+  console.log(utils.calculateUserPM25Mass(1440));
 });
