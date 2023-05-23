@@ -24,6 +24,42 @@ export function PM25ConcentrationFromAQI(AQI) {
     BPh = 500.4;
     BPl = 350.5;
   }
+  if (AQI >= 301) {
+    Ih = 400;
+    Il = 301;
+    BPh = 350.4;
+    BPl = 250.5;
+  }
+  if (AQI >= 201) {
+    Ih = 300;
+    Il = 201;
+    BPh = 250.4;
+    BPl = 150.5;
+  }
+  if (AQI >= 151) {
+    Ih = 200;
+    Il = 151;
+    BPh = 150.4;
+    BPl = 55.5;
+  }
+  if (AQI >= 101) {
+    Ih = 150;
+    Il = 101;
+    BPh = 55.4;
+    BPl = 35.5;
+  }
+  if (AQI >= 51) {
+    Ih = 10;
+    Il = 51;
+    BPh = 35.4;
+    BPl = 12.1;
+  }
+  if (AQI >= 0) {
+    Ih = 50;
+    Il = 0;
+    BPh = 12;
+    BPl = 0;
+  }
 
   // TODO finish filling in constants for different AQI levels
 
