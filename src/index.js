@@ -9,6 +9,7 @@ console.log(utils.calculateMinuteVentilationFromHeartRate(60));
 // TODO Arden Pope bibliography
 // TODO put warning on 500 AQI cap for reliable conversions
 // TODO look up cpa air pollution guidelines for source material
+// TODO html for presenting info
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
