@@ -114,5 +114,6 @@ export function convertToCigarettePercentage(pm25) {
   // pm25 comes in as micrograms, a common cigarette has 12,000 micrograms of PM2.5
   // mulitply but 100 for percentage of a cigarette breathed for the given PM2.5 mass
   const cigarettePercent = (pm25 / 12000) * 100;
-  return Number(cigarettePercent.toFixed(2));
+  const cigarettePercentRounded = Number(cigarettePercent.toFixed(2));
+  return cigarettePercentRounded;
 }
