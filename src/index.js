@@ -21,4 +21,8 @@ submitButton.addEventListener("click", () => {
   console.log(
     utils.convertToCigarettePercentage(utils.calculateUserPM25Mass(1440))
   );
+  dom.insertUserPM25Breathed(utils.calculateUserPM25Mass(1440));
+  dom.insertUserCigarettePercentage(
+    utils.convertToCigarettePercentage(utils.calculateUserPM25Mass(1440))
+  );
 });
