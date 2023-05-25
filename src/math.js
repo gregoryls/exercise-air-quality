@@ -107,7 +107,7 @@ export function calculateUserPM25Mass(minutes) {
     PM25Concentration,
     userVolumeBreathed
   );
-  return userPM25Mass;
+  return Math.round(userPM25Mass);
 }
 
 export function convertToCigarettePercentage(pm25) {
