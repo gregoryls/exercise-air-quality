@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
     math: "./src/math.js",
+    DOM: "./src/DOM.js",
   },
   devtool: "inline-source-map",
   output: {

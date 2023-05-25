@@ -1,5 +1,6 @@
 import "./style.css";
 import * as utils from "./math";
+import * as dom from "./DOM";
 
 console.log(utils.PM25ConcentrationFromAQI(401));
 console.log(utils.calculateMinuteVentilationFromHeartRate(60));
