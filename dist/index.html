@@ -38,22 +38,24 @@
       <label for="userAQI">Enter AQI:</label>
       <input type="number" id="userAQI" name="userAQI" placeholder="40" />
 
-      <label for="userExerciseHeartRate">Enter Exercise Heart Rate:</label>
-      <input
-        type="number"
-        id="userExerciseHeartRate"
-        name="userExerciseHeartRate"
-        placeholder="140"
-      />
-      <label for="userExerciseDuration"
-        >Enter Exercise Duration (minutes):</label
-      >
-      <input
-        type="number"
-        id="userExerciseDuration"
-        name="userExerciseDuration"
-        placeholder="60"
-      />
+      <div id="exerciseWrap">
+        <label for="userExerciseHeartRate">Enter Exercise Heart Rate:</label>
+        <input
+          type="number"
+          id="userExerciseHeartRate"
+          name="userExerciseHeartRate"
+          placeholder="140"
+        />
+        <label for="userExerciseDuration"
+          >Enter Exercise Duration (minutes):</label
+        >
+        <input
+          type="number"
+          id="userExerciseDuration"
+          name="userExerciseDuration"
+          placeholder="60"
+        />
+      </div>
 
       <button id="submitData">Calculate</button>
     </div>
