@@ -91,8 +91,10 @@ export function getUserRestingHeartRate() {
 }
 
 export function getUserRestingDuration() {
-  const duration = document.getElementById("userRestingDuration");
-  return Number(duration.value);
+  let duration = document.getElementById("userRestingDuration");
+  // convert input from hours to minutes
+  duration = Number(duration.value * 60);
+  return duration;
 }
 
 export function calculateUserPM25Mass(minutes) {
