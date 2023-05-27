@@ -90,6 +90,11 @@ export function getUserRestingHeartRate() {
   return Number(userInput.value);
 }
 
+export function getUserRestingDuration() {
+  const duration = document.getElementById("userRestingDuration");
+  return Number(duration.value);
+}
+
 export function calculateUserPM25Mass(minutes) {
   // TODO change to user data functions after testing
   // final unit is in micrograms
