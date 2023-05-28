@@ -81,8 +81,8 @@ export function getUserAQI() {
 }
 
 export function getUserRestingHeartRate() {
-  const userInput = document.getElementById("userHeartRate");
-  return Number(userInput.value);
+  const userHeartRate = document.getElementById("userHeartRate");
+  return Number(userHeartRate.value);
 }
 
 export function getUserRestingDuration() {
@@ -91,6 +91,8 @@ export function getUserRestingDuration() {
   duration = Number(duration.value * 60);
   return duration;
 }
+
+export function getUserExerciseHeartRate() {}
 
 export function getUserExerciseDuration() {
   const duration = document.getElementById("userExerciseDuration");
