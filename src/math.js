@@ -80,6 +80,7 @@ export function getUserAQI() {
   return Number(userAQI.value);
 }
 
+// Resting //
 export function getUserRestingHeartRate() {
   const userHeartRate = document.getElementById("userHeartRate");
   return Number(userHeartRate.value);
@@ -91,7 +92,9 @@ export function getUserRestingDuration() {
   duration = Number(duration.value * 60);
   return duration;
 }
+// //
 
+// Exercise //
 export function getUserExerciseHeartRate() {
   const exerciseHeartRate = document.getElementById("userExerciseHeartRate");
   return Number(exerciseHeartRate.value);
@@ -100,6 +103,15 @@ export function getUserExerciseHeartRate() {
 export function getUserExerciseDuration() {
   const duration = document.getElementById("userExerciseDuration");
   return Number(duration.value);
+}
+// //
+
+export function calculateTotalExposureTime() {
+  const restTime = getUserRestingDuration();
+  const exerciseTime = getUserExerciseDuration();
+  const totalTime = restTime + exerciseTime;
+
+  return totalTime;
 }
 
 export function calculateUserPM25Mass(minutes) {
