@@ -17,8 +17,8 @@ console.log(utils.calculateMinuteVentilationFromHeartRate(60));
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
-  console.log(utils.getUserRestingHeartRate());
-  console.log(utils.getUserAQI());
+  console.log(utils.getUserExerciseDuration());
+  // console.log(utils.getUserAQI());
   // console.log(utils.PM25ConcentrationFromAQI(100));
   console.log(utils.calculateUserPM25Mass(utils.getUserRestingDuration()));
   console.log(
