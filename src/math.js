@@ -92,7 +92,10 @@ export function getUserRestingDuration() {
   return duration;
 }
 
-export function getUserExerciseHeartRate() {}
+export function getUserExerciseHeartRate() {
+  const exerciseHeartRate = document.getElementById("userExerciseHeartRate");
+  return Number(exerciseHeartRate.value);
+}
 
 export function getUserExerciseDuration() {
   const duration = document.getElementById("userExerciseDuration");
