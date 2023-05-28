@@ -2,8 +2,6 @@
 // PM2.5 = Particulate Matter 2.5 micrometer particles
 // Ve = Minute Ventilation, the amount of air breathed usually Liters/minute
 
-// TODO consider wrapping many exports into one exported iife
-
 export function calculateMinuteVentilationFromHeartRate(heartRate) {
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
 
@@ -61,8 +59,6 @@ export function PM25ConcentrationFromAQI(AQI) {
     BPl = 350.5;
   }
 
-  // TODO finish filling in constants for different AQI levels
-
   return (
     (AQI + ((Ih - Il) / (BPh - BPl)) * BPl - Il) / ((Ih - Il) / (BPh - BPl))
   );
@@ -74,7 +70,6 @@ export function calculateVolumeAirBreathed(minuteVentilation, minutes) {
   return volume;
 }
 
-// TODO make sure units match when coming in here
 export function calculatePM25MassBreathed(concentration, volume) {
   const PM25Mass = concentration * volume;
   return PM25Mass;
