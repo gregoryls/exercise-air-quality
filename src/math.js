@@ -97,6 +97,11 @@ export function getUserRestingDuration() {
   return duration;
 }
 
+export function getUserExerciseDuration() {
+  const duration = document.getElementById("userExerciseDuration");
+  return Number(duration.value);
+}
+
 export function calculateUserPM25Mass(minutes) {
   // TODO change to user data functions after testing
   // final unit is in micrograms
