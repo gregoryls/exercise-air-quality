@@ -114,7 +114,7 @@ export function calculateTotalExposureTime() {
   return totalTime;
 }
 
-export function calculateUserPM25Mass(minutes) {
+export function calculateUserPM25Mass() {
   // TODO change to user data functions after testing
   // final unit is in micrograms
 
@@ -124,7 +124,7 @@ export function calculateUserPM25Mass(minutes) {
   );
   const userVolumeBreathed = calculateVolumeAirBreathed(
     userMinuteVolume,
-    minutes
+    calculateTotalExposureTime()
   );
   const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
   const userPM25Mass = calculatePM25MassBreathed(
