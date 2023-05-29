@@ -115,26 +115,25 @@ export function calculateTotalExposureTime() {
 }
 
 export function calculateUserPM25Mass() {
-  // TODO change to user data functions after testing
   // final unit is in micrograms
 
   // 1440 minutes in a day
-  const userMinuteVolume = calculateMinuteVentilationFromHeartRate(
+  const userRestingMinuteVolume = calculateMinuteVentilationFromHeartRate(
     getUserRestingHeartRate()
   );
-  const userVolumeBreathed = calculateVolumeAirBreathed(
-    userMinuteVolume,
+  const userRestingVolumeBreathed = calculateVolumeAirBreathed(
+    userRestingMinuteVolume,
     calculateTotalExposureTime()
   );
   const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
-  const userPM25Mass = calculatePM25MassBreathed(
+  const userRestingPM25Mass = calculatePM25MassBreathed(
     PM25Concentration,
-    userVolumeBreathed
+    userRestingVolumeBreathed
   );
 
   // round result to nearest integer
-  const userPM25MassRounded = Math.round(userPM25Mass);
-  return userPM25MassRounded;
+  const userRestingPM25MassRounded = Math.round(userRestingPM25Mass);
+  return userRestingPM25MassRounded;
 }
 
 export function convertToCigarettePercentage(pm25) {
