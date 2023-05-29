@@ -116,6 +116,7 @@ export function calculateTotalExposureTime() {
 
 export function calculateUserPM25Mass() {
   // final unit is in micrograms
+  const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
 
   // Resting Mass //
   const userRestingMinuteVolume = calculateMinuteVentilationFromHeartRate(
@@ -125,7 +126,6 @@ export function calculateUserPM25Mass() {
     userRestingMinuteVolume,
     getUserRestingDuration()
   );
-  const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
   const userRestingPM25Mass = calculatePM25MassBreathed(
     PM25Concentration,
     userRestingVolumeBreathed
@@ -133,19 +133,25 @@ export function calculateUserPM25Mass() {
   // //
 
   // Exercise Mass //
-  // const userExerciseMinuteVolume = calculateMinuteVentilationFromHeartRate(
-  //   getUserRestingHeartRate()
-  // );
-  // const userExerciseVolumeBreathed = calculateVolumeAirBreathed(
-  //   userExerciseMinuteVolume,
-  //   getUserExerciseDuration()
-  // );
-
+  const userExerciseMinuteVolume = calculateMinuteVentilationFromHeartRate(
+    getUserRestingHeartRate()
+  );
+  const userExerciseVolumeBreathed = calculateVolumeAirBreathed(
+    userExerciseMinuteVolume,
+    getUserExerciseDuration()
+  );
+  const userExercisePM25Mass = calculatePM25MassBreathed(
+    PM25Concentration,
+    userExerciseVolumeBreathed
+  );
   // //
 
   // round result to nearest integer
   const userRestingPM25MassRounded = Math.round(userRestingPM25Mass);
-  return userRestingPM25MassRounded;
+  const userExercisePM25MassRounded = Math.round(userExercisePM25Mass);
+  const totalPM25Mass =
+    userRestingPM25MassRounded + userExercisePM25MassRounded;
+  return totalPM25Mass;
 }
 
 export function convertToCigarettePercentage(pm25) {
