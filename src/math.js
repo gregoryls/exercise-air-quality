@@ -117,19 +117,31 @@ export function calculateTotalExposureTime() {
 export function calculateUserPM25Mass() {
   // final unit is in micrograms
 
-  // 1440 minutes in a day
+  // Resting Mass //
   const userRestingMinuteVolume = calculateMinuteVentilationFromHeartRate(
     getUserRestingHeartRate()
   );
   const userRestingVolumeBreathed = calculateVolumeAirBreathed(
     userRestingMinuteVolume,
-    calculateTotalExposureTime()
+    getUserRestingDuration()
   );
   const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
   const userRestingPM25Mass = calculatePM25MassBreathed(
     PM25Concentration,
     userRestingVolumeBreathed
   );
+  // //
+
+  // Exercise Mass //
+  // const userExerciseMinuteVolume = calculateMinuteVentilationFromHeartRate(
+  //   getUserRestingHeartRate()
+  // );
+  // const userExerciseVolumeBreathed = calculateVolumeAirBreathed(
+  //   userExerciseMinuteVolume,
+  //   getUserExerciseDuration()
+  // );
+
+  // //
 
   // round result to nearest integer
   const userRestingPM25MassRounded = Math.round(userRestingPM25Mass);
