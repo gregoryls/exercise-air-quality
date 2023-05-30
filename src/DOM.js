@@ -1,12 +1,7 @@
 export function insertUserPM25Breathed(mass) {
-  const p = document.createElement("p");
-  const massOutput = document.getElementById("massOutput");
+  const massResult = document.getElementById("massResult");
 
-  //
-  massOutput.removeChild(massOutput.lastChild);
-
-  p.textContent = mass;
-  massOutput.append(p);
+  massResult.textContent = mass;
 }
 
 export function insertUserCigarettePercentage(percent) {
