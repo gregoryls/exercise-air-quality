@@ -9,11 +9,12 @@ import * as dom from "./DOM";
 // TODO look up more about indoor vs outdoor smoking
 // TODO Arden Pope bibliography
 // TODO put warning on 500 AQI cap for reliable conversions
-// TODO look up cpa air pollution guidelines for source material
+// TODO look up epa air pollution guidelines for source material
 // TODO html for presenting info
 // TODO hide output html until calculated
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
-// TODO math for combinign exercise inputs
+// TODO clear display area before each render
+// see if importing to dom could steamline some pieces
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
