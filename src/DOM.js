@@ -8,5 +8,5 @@ export function insertUserCigarettePercentage(percent) {
   const cigarettePercentageResult = document.getElementById(
     "cigarettePercentageResult"
   );
-  cigarettePercentageResult.textContent = percent;
+  cigarettePercentageResult.textContent = `${percent}%`;
 }
