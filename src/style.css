@@ -5,3 +5,10 @@ body {
 #exerciseWrap {
   border: 1px solid black;
 }
+
+#massOutput,
+#cigarettePercentage {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
