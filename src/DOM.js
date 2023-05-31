@@ -1,7 +1,7 @@
 export function insertUserPM25Breathed(mass) {
   const massResult = document.getElementById("massResult");
-
-  massResult.textContent = mass;
+  // \u00b5 corresponds to µ
+  massResult.textContent = `${mass} \u00b5g`;
 }
 
 export function insertUserCigarettePercentage(percent) {
