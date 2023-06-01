@@ -2,8 +2,24 @@ body {
   background-color: gray;
 }
 
+#calculatorWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  background-color: rgba(0, 255, 255, 0.281);
+}
+
+#restingWrap,
 #exerciseWrap {
   border: 1px solid black;
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 10px;
+}
+#submitData {
+  width: 175px;
 }
 
 #massOutput,
