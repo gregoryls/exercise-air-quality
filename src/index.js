@@ -13,8 +13,8 @@ import * as dom from "./DOM";
 // TODO html for presenting info
 // TODO hide output html until calculated
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
-// TODO clear display area before each render
 // see if importing to dom could steamline some pieces
+// investigate blank exercise heart rate bug
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
