@@ -18,13 +18,13 @@ import * as dom from "./DOM";
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
-  console.log(utils.getUserExerciseDuration());
+  // console.log(utils.getUserExerciseDuration());
   // console.log(utils.getUserAQI());
   // console.log(utils.PM25ConcentrationFromAQI(100));
-  console.log(utils.calculateUserPM25Mass());
-  console.log(
-    utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
-  );
+  // console.log(utils.calculateUserPM25Mass());
+  // console.log(
+  //   utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
+  // );
   dom.insertUserPM25Breathed(utils.calculateUserPM25Mass());
   dom.insertUserCigarettePercentage(
     utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
