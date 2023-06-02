@@ -45,3 +45,7 @@ body {
   align-items: center;
   gap: 0.2rem;
 }
+
+.hidden {
+  /* display: none; */
+}
