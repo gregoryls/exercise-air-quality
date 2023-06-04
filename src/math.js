@@ -3,10 +3,15 @@
 // Ve = Minute Ventilation, the amount of air breathed usually Liters/minute
 
 export function calculateMinuteVentilationFromHeartRate(heartRate) {
+  // boolean for user selection of 'Female?' checkbox
+  const checkFemale = document.getElementById("genderCheckbox").checked;
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
 
   // convert standard Liters/minute units to m^3/minute to match with standard pm2.5 concentration units
   const minuteVentilationM3 = minuteVentilation / 1000;
+
+  // women have lungs 75% the size of men - apply correction factor
+  if (checkFemale) return minuteVentilationM3 * 0.75;
   return minuteVentilationM3;
 }
 

@@ -15,6 +15,7 @@ import * as dom from "./DOM";
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
 // investigate blank exercise heart rate bug
+// math for female option
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
