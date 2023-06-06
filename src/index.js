@@ -30,4 +30,4 @@ submitButton.addEventListener("click", () => {
     utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
   );
 });
-console.log(utils.calculateRelativeRiskLungCancer(60 * 10));
+console.log(utils.calculateRelativeRiskCVDMortality(60));
