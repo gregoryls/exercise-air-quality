@@ -69,6 +69,11 @@ export function PM25ConcentrationFromAQI(AQI) {
   );
 }
 
+export function calculateRelativeRiskLungCancer(mass) {
+  const risk = 1 + 0.3195 * mass ** 0.7433;
+  return risk;
+}
+
 export function calculateVolumeAirBreathed(minuteVentilation, minutes) {
   // units in m^3, based on minute ventilation function
   const volume = minuteVentilation * minutes;
