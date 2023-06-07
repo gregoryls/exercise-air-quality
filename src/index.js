@@ -15,6 +15,7 @@ import * as dom from "./DOM";
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
 // investigate blank exercise heart rate bug
+// look into using plotly library
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
@@ -30,6 +31,8 @@ submitButton.addEventListener("click", () => {
   dom.insertUserCigarettePercentage(
     utils.convertToCigarettePercentage(PM25MassBreathed)
   );
+
+  // relative risk mass divided by 1000 to get units rights; micrograms to required milligrams
   dom.insertLungCancerMortality(
     utils.calculateRelativeRiskLungCancerMortality(PM25MassBreathed / 1000)
   );
