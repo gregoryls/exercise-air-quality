@@ -29,5 +29,10 @@ submitButton.addEventListener("click", () => {
   dom.insertUserCigarettePercentage(
     utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
   );
+  dom.insertLungCancerMortality(
+    utils.calculateRelativeRiskLungCancerMortality(
+      utils.calculatePM25MassBreathed()
+    )
+  );
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));

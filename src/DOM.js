@@ -10,3 +10,13 @@ export function insertUserCigarettePercentage(percent) {
   );
   cigarettePercentageResult.textContent = `${percent}%`;
 }
+
+export function insertLungCancerMortality(relativeRisk) {
+  const lungCancerMortalityResult = document.getElementById("test");
+  lungCancerMortalityResult.textContent = `Lung cancer mortality: ${relativeRisk}`;
+}
+
+export function insertCVDMortality(relativeRisk) {
+  const CVDMortalityResult = document.getElementById("test2");
+  CVDMortalityResult.textContent = `CVD mortality: ${relativeRisk}`;
+}
