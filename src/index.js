@@ -18,6 +18,7 @@ import * as dom from "./DOM";
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
+  const PM25MassBreathed = utils.calculateUserPM25Mass();
   // console.log(utils.getUserExerciseDuration());
   // console.log(utils.getUserAQI());
   // console.log(utils.PM25ConcentrationFromAQI(100));
@@ -25,14 +26,12 @@ submitButton.addEventListener("click", () => {
   // console.log(
   //   utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
   // );
-  dom.insertUserPM25Breathed(utils.calculateUserPM25Mass());
+  dom.insertUserPM25Breathed(PM25MassBreathed);
   dom.insertUserCigarettePercentage(
-    utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
+    utils.convertToCigarettePercentage(PM25MassBreathed)
   );
   dom.insertLungCancerMortality(
-    utils.calculateRelativeRiskLungCancerMortality(
-      utils.calculatePM25MassBreathed()
-    )
+    utils.calculateRelativeRiskLungCancerMortality(PM25MassBreathed / 1000)
   );
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));
