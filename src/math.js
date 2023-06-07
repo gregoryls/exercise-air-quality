@@ -90,7 +90,7 @@ export function calculateVolumeAirBreathed(minuteVentilation, minutes) {
 
 export function calculatePM25MassBreathed(concentration, volume) {
   const PM25Mass = concentration * volume;
-  return PM25Mass;
+  return Number(PM25Mass);
 }
 
 export function getUserAQI() {
