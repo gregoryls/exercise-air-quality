@@ -57,6 +57,10 @@ body {
   gap: 0.2rem;
 }
 
+#relativeRisks ul {
+  list-style-type: none;
+}
+
 .hidden {
   /* display: none; */
 }
