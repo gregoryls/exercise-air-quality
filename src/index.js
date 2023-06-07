@@ -33,5 +33,8 @@ submitButton.addEventListener("click", () => {
   dom.insertLungCancerMortality(
     utils.calculateRelativeRiskLungCancerMortality(PM25MassBreathed / 1000)
   );
+  dom.insertCVDMortality(
+    utils.calculateRelativeRiskCVDMortality(PM25MassBreathed / 1000)
+  );
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));
