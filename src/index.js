@@ -1,4 +1,5 @@
 import "./style.css";
+import Plotly from "plotly.js-dist-min";
 import * as utils from "./math";
 import * as dom from "./DOM";
 
@@ -40,3 +41,15 @@ submitButton.addEventListener("click", () => {
   );
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));
+Plotly.newPlot(
+  "testPlot",
+  [
+    {
+      x: [1, 2, 3, 4, 5],
+      y: [1, 1, 2, 3, 5],
+    },
+  ],
+  {
+    margin: { t: 0 },
+  }
+);
