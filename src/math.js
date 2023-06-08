@@ -3,6 +3,7 @@
 // Ve = Minute Ventilation, the amount of air breathed usually Liters/minute
 
 export function calculateMinuteVentilationFromHeartRate(heartRate) {
+  if (heartRate === 0) return 0;
   // boolean for user selection of 'Female?' checkbox
   const checkFemale = document.getElementById("genderCheckbox").checked;
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
