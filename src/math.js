@@ -79,10 +79,11 @@ export function calculateRelativeRiskLungCancerMortality(mass) {
   return riskRounded;
 }
 
-export function calculateRelativeRiskCVDMortality(mass) {
+export function calculateRelativeRiskCVDMortality(mass, rounding) {
   // this function expects mass input with units of milligrams(mg)
   // this covers ischemic heart disease(IHD), cardiavascular disease(CVD), and cardiopulmonary disease(CPD)
   const risk = 1 + 0.2685 * mass ** 0.273;
+  if (!rounding) return risk;
   const riskRounded = risk.toFixed(2);
   return riskRounded;
 }

@@ -37,7 +37,7 @@ submitButton.addEventListener("click", () => {
     utils.calculateRelativeRiskLungCancerMortality(PM25MassBreathed / 1000)
   );
   dom.insertCVDMortality(
-    utils.calculateRelativeRiskCVDMortality(PM25MassBreathed / 1000)
+    utils.calculateRelativeRiskCVDMortality(PM25MassBreathed / 1000, true)
   );
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));
@@ -52,7 +52,7 @@ console.log(plotMass);
 
 const plotRelativeRiskCVD = [];
 for (let i = 0; i < plotMass.length; i += 1) {
-  const risk = utils.calculateRelativeRiskCVDMortality(plotMass[i]);
+  const risk = utils.calculateRelativeRiskCVDMortality(plotMass[i], false);
   plotRelativeRiskCVD.push(risk);
 }
 console.log(plotRelativeRiskCVD);
