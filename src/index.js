@@ -16,6 +16,8 @@ import * as dom from "./DOM";
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
 // consider 1 day air pollution effects on hospitalization
+// add bool to lung cancer calc + make plot
+// consider plots for large masses as well
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
@@ -69,6 +71,9 @@ Plotly.newPlot(
     },
   ],
   {
-    margin: { t: 0 },
+    // margin: { t: 0 },
+    title: "Relative Risk CVD Mortality",
+    xaxis: { title: "Chronic Daily Exposure of PM2.5 mass (mg)" },
+    yaxis: { title: "Relative Risk" },
   }
 );
