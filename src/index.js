@@ -41,6 +41,15 @@ submitButton.addEventListener("click", () => {
   );
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));
+
+const plotMass = [];
+let mass = 0;
+for (let i = 0; i < 100; i += 1) {
+  plotMass.push(mass);
+  mass += 0.05;
+}
+console.log(plotMass);
+
 Plotly.newPlot(
   "testPlot",
   [
