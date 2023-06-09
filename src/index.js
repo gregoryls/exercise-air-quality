@@ -15,7 +15,7 @@ import * as dom from "./DOM";
 // TODO hide output html until calculated
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
-// look into using plotly library
+// consider 1 day air pollution effects on hospitalization
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
