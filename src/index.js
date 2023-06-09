@@ -50,6 +50,13 @@ for (let i = 0; i < 100; i += 1) {
 }
 console.log(plotMass);
 
+const plotRelativeRiskCVD = [];
+for (let i = 0; i < plotMass.length; i += 1) {
+  const risk = utils.calculateRelativeRiskCVDMortality(plotMass[i]);
+  plotRelativeRiskCVD.push(risk);
+}
+console.log(plotRelativeRiskCVD);
+
 Plotly.newPlot(
   "testPlot",
   [
