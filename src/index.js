@@ -63,6 +63,9 @@ Plotly.newPlot(
     {
       x: plotMass,
       y: plotRelativeRiskCVD,
+      mode: "lines",
+      name: "spline",
+      line: { shape: "spline" },
     },
   ],
   {
