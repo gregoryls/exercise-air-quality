@@ -138,11 +138,14 @@ export function calculateTotalExposureTime() {
   return totalTime;
 }
 
-export function calculateUserPM25Mass() {
+export function calculateUserPM25Mass(day) {
   // final unit is in micrograms
   const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
-  const userRestingDuration = getUserRestingDuration();
+  let userRestingDuration = getUserRestingDuration();
   const userExerciseDuration = getUserExerciseDuration();
+
+  if (day) userRestingDuration = 1440 - userExerciseDuration;
+  console.log(userRestingDuration);
 
   // Resting Mass //
   const userRestingMinuteVolume = calculateMinuteVentilationFromHeartRate(

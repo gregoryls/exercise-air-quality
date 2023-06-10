@@ -23,6 +23,7 @@ import * as dom from "./DOM";
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
   const PM25MassBreathed = utils.calculateUserPM25Mass();
+  // const PM25MassBreathed24Hour = utils.calculateUserPM25Mass(true);
   // console.log(utils.getUserExerciseDuration());
   // console.log(utils.getUserAQI());
   // console.log(utils.PM25ConcentrationFromAQI(100));
