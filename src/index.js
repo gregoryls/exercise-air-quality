@@ -23,7 +23,7 @@ import * as dom from "./DOM";
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
   const PM25MassBreathed = utils.calculateUserPM25Mass();
-  // const PM25MassBreathed24Hour = utils.calculateUserPM25Mass(true);
+  const PM25MassBreathed24Hour = utils.calculateUserPM25Mass(true);
   // console.log(utils.getUserExerciseDuration());
   // console.log(utils.getUserAQI());
   // console.log(utils.PM25ConcentrationFromAQI(100));
@@ -38,10 +38,12 @@ submitButton.addEventListener("click", () => {
 
   // relative risk mass divided by 1000 to get units rights; micrograms to required milligrams
   dom.insertLungCancerMortality(
-    utils.calculateRelativeRiskLungCancerMortality(PM25MassBreathed / 1000)
+    utils.calculateRelativeRiskLungCancerMortality(
+      PM25MassBreathed24Hour / 1000
+    )
   );
   dom.insertCVDMortality(
-    utils.calculateRelativeRiskCVDMortality(PM25MassBreathed / 1000, true)
+    utils.calculateRelativeRiskCVDMortality(PM25MassBreathed24Hour / 1000, true)
   );
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));
