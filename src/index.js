@@ -18,6 +18,7 @@ import * as dom from "./DOM";
 // consider 1 day air pollution effects on hospitalization
 // add bool to lung cancer calc + make plot
 // consider plots for large masses as well
+// think about the hours input and chronic risk impacts - what if user inputs 36 hours
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
