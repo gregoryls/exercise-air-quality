@@ -104,7 +104,7 @@ Plotly.newPlot(
   ],
   {
     // margin: { t: 0 },
-    title: "Relative Risk CVD Mortality",
+    title: "Relative Risk Lung Cancer Mortality",
     xaxis: { title: "Chronic Daily Exposure of PM2.5 mass (mg)" },
     yaxis: { title: "Relative Risk" },
   }
