@@ -99,7 +99,7 @@ Plotly.newPlot(
       y: plotRelativeRiskLungCancer,
       mode: "lines",
       name: "spline",
-      line: { shape: "spline" },
+      line: { shape: "spline", color: "rgb(217, 14, 0)" },
     },
   ],
   {
