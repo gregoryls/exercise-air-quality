@@ -90,3 +90,22 @@ Plotly.newPlot(
     yaxis: { title: "Relative Risk" },
   }
 );
+
+Plotly.newPlot(
+  "testPlot2",
+  [
+    {
+      x: plotMass,
+      y: plotRelativeRiskLungCancer,
+      mode: "lines",
+      name: "spline",
+      line: { shape: "spline" },
+    },
+  ],
+  {
+    // margin: { t: 0 },
+    title: "Relative Risk CVD Mortality",
+    xaxis: { title: "Chronic Daily Exposure of PM2.5 mass (mg)" },
+    yaxis: { title: "Relative Risk" },
+  }
+);
