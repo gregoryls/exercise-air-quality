@@ -63,6 +63,15 @@ for (let i = 0; i < plotMass.length; i += 1) {
 }
 console.log(plotRelativeRiskCVD);
 
+const plotRelativeRiskLungCancer = [];
+for (let i = 0; i < plotMass.length; i += 1) {
+  const risk = utils.calculateRelativeRiskLungCancerMortality(
+    plotMass[i],
+    false
+  );
+  plotRelativeRiskLungCancer.push(risk);
+}
+
 Plotly.newPlot(
   "testPlot",
   [
