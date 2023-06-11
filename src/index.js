@@ -104,8 +104,15 @@ Plotly.newPlot(
   ],
   {
     // margin: { t: 0 },
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "rgba(0,0,0,0)",
+    font: { color: "black" },
+
     title: "Relative Risk Lung Cancer Mortality",
-    xaxis: { title: "Chronic Daily Exposure of PM2.5 mass (mg)" },
-    yaxis: { title: "Relative Risk" },
+    xaxis: {
+      title: "Chronic Daily Exposure of PM2.5 mass (mg)",
+      gridcolor: "black",
+    },
+    yaxis: { title: "Relative Risk", gridcolor: "black" },
   }
 );
