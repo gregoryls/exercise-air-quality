@@ -19,33 +19,39 @@ import * as dom from "./DOM";
 // add bool to lung cancer calc + make plot
 // consider plots for large masses as well
 // think about the hours input and chronic risk impacts - what if user inputs 36 hours
-// require calc inputs to be numbers (positive numbers at that)
+// fix form validation issues...
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
-  const PM25MassBreathed = utils.calculateUserPM25Mass();
-  const PM25MassBreathed24Hour = utils.calculateUserPM25Mass(true);
-  // console.log(utils.getUserExerciseDuration());
-  // console.log(utils.getUserAQI());
-  // console.log(utils.PM25ConcentrationFromAQI(100));
-  // console.log(utils.calculateUserPM25Mass());
-  // console.log(
-  //   utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
-  // );
-  dom.insertUserPM25Breathed(PM25MassBreathed);
-  dom.insertUserCigarettePercentage(
-    utils.convertToCigarettePercentage(PM25MassBreathed)
-  );
+  const form = document.getElementById("inputForm");
+  if (form.checkValidity()) {
+    const PM25MassBreathed = utils.calculateUserPM25Mass();
+    const PM25MassBreathed24Hour = utils.calculateUserPM25Mass(true);
+    // console.log(utils.getUserExerciseDuration());
+    // console.log(utils.getUserAQI());
+    // console.log(utils.PM25ConcentrationFromAQI(100));
+    // console.log(utils.calculateUserPM25Mass());
+    // console.log(
+    //   utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
+    // );
+    dom.insertUserPM25Breathed(PM25MassBreathed);
+    dom.insertUserCigarettePercentage(
+      utils.convertToCigarettePercentage(PM25MassBreathed)
+    );
 
-  // relative risk mass divided by 1000 to get units rights; micrograms to required milligrams
-  dom.insertLungCancerMortality(
-    utils.calculateRelativeRiskLungCancerMortality(
-      PM25MassBreathed24Hour / 1000
-    )
-  );
-  dom.insertCVDMortality(
-    utils.calculateRelativeRiskCVDMortality(PM25MassBreathed24Hour / 1000, true)
-  );
+    // relative risk mass divided by 1000 to get units rights; micrograms to required milligrams
+    dom.insertLungCancerMortality(
+      utils.calculateRelativeRiskLungCancerMortality(
+        PM25MassBreathed24Hour / 1000
+      )
+    );
+    dom.insertCVDMortality(
+      utils.calculateRelativeRiskCVDMortality(
+        PM25MassBreathed24Hour / 1000,
+        true
+      )
+    );
+  }
 });
 console.log(utils.calculateRelativeRiskCVDMortality(60));
 
