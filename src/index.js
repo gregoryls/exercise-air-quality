@@ -19,6 +19,7 @@ import * as dom from "./DOM";
 // add bool to lung cancer calc + make plot
 // consider plots for large masses as well
 // think about the hours input and chronic risk impacts - what if user inputs 36 hours
+// require calc inputs to be numbers (positive numbers at that)
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
@@ -80,14 +81,21 @@ Plotly.newPlot(
       y: plotRelativeRiskCVD,
       mode: "lines",
       name: "spline",
-      line: { shape: "spline" },
+      line: { shape: "spline", color: "rgb(217, 14, 0)" },
     },
   ],
   {
     // margin: { t: 0 },
+    paper_bgcolor: "rgba(0,0,0,0)",
+    plot_bgcolor: "rgba(0,0,0,0)",
+    font: { color: "black" },
+
     title: "Relative Risk CVD Mortality",
-    xaxis: { title: "Chronic Daily Exposure of PM2.5 mass (mg)" },
-    yaxis: { title: "Relative Risk" },
+    xaxis: {
+      title: "Chronic Daily Exposure of PM2.5 mass (mg)",
+      gridcolor: "black",
+    },
+    yaxis: { title: "Relative Risk", gridcolor: "black" },
   }
 );
 
