@@ -2,7 +2,7 @@ body {
   background-color: gray;
 }
 
-#calculatorWrap {
+#calculatorWrap form {
   display: flex;
   flex-direction: column;
   align-items: center;
