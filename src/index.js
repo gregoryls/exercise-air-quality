@@ -19,7 +19,7 @@ import * as dom from "./DOM";
 // add bool to lung cancer calc + make plot
 // consider plots for large masses as well
 // think about the hours input and chronic risk impacts - what if user inputs 36 hours
-// fix form validation issues...
+// update exercise inputs to match resting validation standards
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
