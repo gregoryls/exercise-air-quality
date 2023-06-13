@@ -92,8 +92,8 @@ Plotly.newPlot(
   ],
   {
     // margin: { t: 0 },
-    paper_bgcolor: "rgba(0,0,0,0)",
-    plot_bgcolor: "rgba(0,0,0,0)",
+    paper_bgcolor: "#c1f0c135",
+    plot_bgcolor: "#c1f0c1",
     font: { color: "black" },
 
     title: "Relative Risk CVD Mortality",
@@ -102,6 +102,8 @@ Plotly.newPlot(
       gridcolor: "black",
     },
     yaxis: { title: "Relative Risk", gridcolor: "black" },
+    hovermode: "closest",
+    hoverdistance: -1,
   }
 );
 
@@ -118,8 +120,8 @@ Plotly.newPlot(
   ],
   {
     // margin: { t: 0 },
-    paper_bgcolor: "rgba(0,0,0,0)",
-    plot_bgcolor: "rgba(0,0,0,0)",
+    paper_bgcolor: "#c1f0c135",
+    plot_bgcolor: "#c1f0c1",
     font: { color: "black" },
 
     title: "Relative Risk Lung Cancer Mortality",
