@@ -11,13 +11,6 @@
       <h1>AQI Health Calculator</h1>
     </header>
     <div id="calculatorWrap">
-      
-
-      <div id="gender">
-        <label for="genderCheckbox">Female?</label>
-        <input type="checkbox" id="genderCheckbox" name="genderCheckbox" />
-      </div>
-
 
       <form onsubmit="return false" id="inputForm">
         <!-- onsubmit attribute prevents page reload on form submission -->
@@ -99,6 +92,12 @@
             </div>
           </div>
         </div>
+
+        <div id="gender">
+        <label for="genderCheckbox">Female?</label>
+        <input type="checkbox" id="genderCheckbox" name="genderCheckbox" />
+      </div>
+      
         <button id="submitData" type="submit">Calculate</button>
       </form>
     </div>
