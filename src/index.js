@@ -80,6 +80,8 @@ for (let i = 0; i < plotMass.length; i += 1) {
 
 Plotly.newPlot(
   "testPlot",
+
+  // data
   [
     {
       x: plotMass,
@@ -89,8 +91,12 @@ Plotly.newPlot(
       line: { shape: "spline", color: "rgb(217, 14, 0)" },
     },
   ],
+
+  // layout
   {
-    // margin: { t: 0 },
+    // width: 400,
+    // height: 400,
+
     paper_bgcolor: "#c1f0c135",
     plot_bgcolor: "#c1f0c1",
     font: { color: "black" },
@@ -104,11 +110,15 @@ Plotly.newPlot(
     hovermode: "closest",
     hoverdistance: -1,
   },
+
+  // config
   { responsive: true }
 );
 
 Plotly.newPlot(
   "testPlot2",
+
+  // data
   [
     {
       x: plotMass,
@@ -118,8 +128,9 @@ Plotly.newPlot(
       line: { shape: "spline", color: "rgb(217, 14, 0)" },
     },
   ],
+
+  // layout
   {
-    // margin: { t: 0 },
     paper_bgcolor: "#c1f0c135",
     plot_bgcolor: "#c1f0c1",
     font: { color: "black" },
@@ -131,5 +142,7 @@ Plotly.newPlot(
     },
     yaxis: { title: "Relative Risk", gridcolor: "black" },
   },
+
+  // config
   { responsive: true }
 );
