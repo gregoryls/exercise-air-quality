@@ -6,19 +6,11 @@ import * as dom from "./DOM";
 // console.log(utils.PM25ConcentrationFromAQI(401));
 // console.log(utils.calculateMinuteVentilationFromHeartRate(60));
 
-// NOTE - make page as checkbox calculator, did you do a workout? how long? --> adds to total count for a 24 hour period
-// TODO look up more about indoor vs outdoor smoking
-// TODO Arden Pope bibliography
-// TODO put warning on 500 AQI cap for reliable conversions
-// TODO look up epa air pollution guidelines for source material
-// TODO html for presenting info
-// TODO hide output html until calculated
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
 // consider 1 day air pollution effects on hospitalization
-// add bool to lung cancer calc + make plot
 // consider plots for large masses as well
-// think about the hours input and chronic risk impacts - what if user inputs 36 hours
+// flex input output together
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
