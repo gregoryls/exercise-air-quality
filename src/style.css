@@ -17,11 +17,6 @@ body {
   background-color: rgba(0, 255, 255, 0.281);
 }
 
-#calculationOptionWrap {
-  display: flex;
-  gap: 8px;
-}
-
 #restExerciseWrap {
   display: flex;
   gap: 8px;
