@@ -7,6 +7,11 @@ body {
   min-height: 100vh;
 }
 
+h2 {
+  margin: 0;
+  text-align: center;
+}
+
 #calculatorWrap form {
   display: flex;
   flex-direction: column;
@@ -46,7 +51,8 @@ body {
 
 #calculatorOutput {
   background-color: rgba(218, 82, 3, 0.281);
-  width: 470px;
+  padding: 10px;
+  width: 450px;
 }
 
 #massOutput,
