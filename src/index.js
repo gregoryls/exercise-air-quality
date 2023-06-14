@@ -103,7 +103,8 @@ Plotly.newPlot(
     yaxis: { title: "Relative Risk", gridcolor: "black" },
     hovermode: "closest",
     hoverdistance: -1,
-  }
+  },
+  { responsive: true }
 );
 
 Plotly.newPlot(
@@ -129,5 +130,6 @@ Plotly.newPlot(
       gridcolor: "black",
     },
     yaxis: { title: "Relative Risk", gridcolor: "black" },
-  }
+  },
+  { responsive: true }
 );
