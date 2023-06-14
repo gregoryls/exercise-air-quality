@@ -56,9 +56,9 @@ console.log(utils.calculateRelativeRiskCVDMortality(60));
 
 const plotMass = [];
 let mass = 0;
-for (let i = 0; i < 1000; i += 1) {
+for (let i = 0; i < 1201; i += 1) {
   plotMass.push(mass);
-  mass += 0.005;
+  mass += 0.01;
 }
 console.log(plotMass);
 
