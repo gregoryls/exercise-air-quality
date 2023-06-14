@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
   min-height: 100vh;
 }
 
@@ -48,6 +49,11 @@ body {
   width: 175px;
 }
 
+#calculatorOutput {
+  background-color: rgba(218, 82, 3, 0.281);
+  width: 470px;
+}
+
 #massOutput,
 #cigarettePercentage {
   display: flex;
@@ -61,7 +67,7 @@ body {
 
 #plotContent {
   /* display: flex; */
-  width: 50vw;
+  /* width: 50vw; */
 }
 
 .hidden {
