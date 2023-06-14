@@ -72,9 +72,10 @@ export function PM25ConcentrationFromAQI(AQI) {
   );
 }
 
-export function calculateRelativeRiskLungCancerMortality(mass) {
+export function calculateRelativeRiskLungCancerMortality(mass, rounding) {
   // this function expects mass input with units of milligrams(mg)
   const risk = 1 + 0.3195 * mass ** 0.7433;
+  if (!rounding) return risk;
   const riskRounded = risk.toFixed(2);
   return riskRounded;
 }
