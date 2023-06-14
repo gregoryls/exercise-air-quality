@@ -19,7 +19,6 @@ import * as dom from "./DOM";
 // add bool to lung cancer calc + make plot
 // consider plots for large masses as well
 // think about the hours input and chronic risk impacts - what if user inputs 36 hours
-// update exercise inputs to match resting validation standards
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
@@ -57,9 +56,9 @@ console.log(utils.calculateRelativeRiskCVDMortality(60));
 
 const plotMass = [];
 let mass = 0;
-for (let i = 0; i < 100; i += 1) {
+for (let i = 0; i < 1000; i += 1) {
   plotMass.push(mass);
-  mass += 0.05;
+  mass += 0.005;
 }
 console.log(plotMass);
 
