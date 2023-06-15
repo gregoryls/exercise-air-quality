@@ -83,6 +83,7 @@ h2 {
 .js-plotly-plot {
   background-color: #c1f0c135;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .hidden {
