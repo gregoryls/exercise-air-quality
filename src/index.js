@@ -139,3 +139,17 @@ Plotly.newPlot(
   // config
   { responsive: true }
 );
+
+const infoModalButton = document.getElementById("infoModalButton");
+const infoModal = document.getElementById("modal");
+const overlay = document.querySelector(".overlay");
+
+infoModalButton.addEventListener("click", () => {
+  dom.removeClass(infoModal, "hidden");
+  dom.removeClass(overlay, "hidden");
+});
+
+overlay.addEventListener("click", () => {
+  dom.addClass(infoModal, "hidden");
+  dom.addClass(overlay, "hidden");
+});

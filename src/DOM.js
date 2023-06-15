@@ -24,3 +24,11 @@ export function insertCVDMortality(relativeRisk) {
   const CVDMortalityResult = document.getElementById("test2");
   CVDMortalityResult.textContent = `CVD mortality: ${relativeRisk}`;
 }
+
+export function addClass(element, className) {
+  element.classList.add(className);
+}
+
+export function removeClass(element, className) {
+  element.classList.remove(className);
+}
