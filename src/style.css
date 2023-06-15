@@ -12,6 +12,11 @@ h2 {
   text-align: center;
 }
 
+#inputOutput {
+  display: flex;
+  gap: 20px;
+}
+
 #calculatorInput form {
   display: flex;
   flex-direction: column;
