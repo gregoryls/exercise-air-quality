@@ -33,7 +33,8 @@ submitButton.addEventListener("click", () => {
     // relative risk mass divided by 1000 to get units rights; micrograms to required milligrams
     dom.insertLungCancerMortality(
       utils.calculateRelativeRiskLungCancerMortality(
-        PM25MassBreathed24Hour / 1000
+        PM25MassBreathed24Hour / 1000,
+        true
       )
     );
     dom.insertCVDMortality(
