@@ -90,7 +90,7 @@ Plotly.newPlot(
     // width: 400,
     // height: 400,
 
-    paper_bgcolor: "#c1f0c135",
+    paper_bgcolor: "#00000000",
     plot_bgcolor: "#c1f0c1",
     font: { color: "black" },
 
@@ -124,7 +124,7 @@ Plotly.newPlot(
 
   // layout
   {
-    paper_bgcolor: "#c1f0c135",
+    paper_bgcolor: "#00000000",
     plot_bgcolor: "#c1f0c1",
     font: { color: "black" },
 

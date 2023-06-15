@@ -80,6 +80,10 @@ h2 {
   /* display: flex; */
   /* width: 50vw; */
 }
+.js-plotly-plot {
+  background-color: #c1f0c135;
+  border-radius: 8px;
+}
 
 .hidden {
   /* display: none; */
