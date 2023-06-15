@@ -2,7 +2,10 @@ export function insertUserPM25Breathed(mass) {
   const massResult = document.getElementById("massResult");
   // \u00b5 corresponds to µ
   // massResult.textContent = `${mass} \u00b5g`;
-  massResult.textContent = `${mass / 1000} mg`;
+
+  // convert µg input to mg for output
+  const massMG = mass / 1000;
+  massResult.textContent = `${massMG.toFixed(2)} mg`;
 }
 
 export function insertUserCigarettePercentage(percent) {
