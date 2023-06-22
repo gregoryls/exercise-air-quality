@@ -33,14 +33,15 @@
               <!-- 80 is an average heart rate in the USA -->
               <div class="input">
                 <label for="userAQI">Enter AQI:</label>
-                <input type="number"
-                id="userAQI"
-                name="userAQI"
-                placeholder="40"
-                min="1"
-                max="10000"
-                step="any"
-                required
+                <input
+                  type="number"
+                  id="userAQI"
+                  name="userAQI"
+                  placeholder="40"
+                  min="1"
+                  max="10000"
+                  step="any"
+                  required
                 />
               </div>
               <div class="input">
@@ -88,16 +89,15 @@
                   value="0"
                   min="0"
                   step="any"
-      
                 />
               </div>
             </div>
           </div>
           <div id="gender">
-          <label for="genderCheckbox">Female?</label>
-          <input type="checkbox" id="genderCheckbox" name="genderCheckbox" />
-        </div>
-      
+            <label for="genderCheckbox">Female?</label>
+            <input type="checkbox" id="genderCheckbox" name="genderCheckbox" />
+          </div>
+
           <button id="submitData" type="submit">Calculate</button>
         </form>
       </div>
@@ -113,12 +113,14 @@
           <p id="cigarettePercentageResult"></p>
         </div>
         <div id="relativeRisks">
-          <p>Relative risks for chronic exposure assuming consistent AQI, heart rate, and exercise in a 24 hour period.
-            <ul>
-              <li id="test">Lung cancer mortality:</li>
-              <li id="test2">CVD mortality:</li>
-            </ul>
+          <p>
+            Relative risks for chronic exposure assuming consistent AQI, heart
+            rate, and exercise in a 24 hour period.
           </p>
+          <ul>
+            <li id="test">Lung cancer mortality:</li>
+            <li id="test2">CVD mortality:</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -127,7 +129,7 @@
       <div id="testPlot"></div>
       <div id="testPlot2"></div>
     </div>
-    
+
     <button id="infoModalButton">Information</button>
 
     <div id="modal" class="modal hidden">
@@ -181,20 +183,40 @@
           </ol>
         </li>
         <li>
-          While cigarettes and how they are smoked will vary, the standard value for pm2.5 in one cigarette (equivalent to the amount of tar) is 12mg (1)
-        <ol>
-          <li>
-            Pope, C. Arden, Richard T. Burnett, Michelle C. Turner, Aaron Cohen, Daniel Krewski, Michael Jerrett, Susan M. Gapstur, and Michael J. Thun. “Lung Cancer and Cardiovascular Disease Mortality Associated with Ambient Air Pollution and Cigarette Smoke: Shape of the Exposure–Response Relationships.” Environmental Health Perspectives 119, no. 11 (November 2011): 1616–21. https://doi.org/10.1289/ehp.1103639.
-
-          </li>
-        </ol>
+          While cigarettes and how they are smoked will vary, the standard value
+          for pm2.5 in one cigarette (equivalent to the amount of tar) is 12mg
+          (1)
+          <ol>
+            <li>
+              Pope, C. Arden, Richard T. Burnett, Michelle C. Turner, Aaron
+              Cohen, Daniel Krewski, Michael Jerrett, Susan M. Gapstur, and
+              Michael J. Thun. “Lung Cancer and Cardiovascular Disease Mortality
+              Associated with Ambient Air Pollution and Cigarette Smoke: Shape
+              of the Exposure–Response Relationships.” Environmental Health
+              Perspectives 119, no. 11 (November 2011): 1616–21.
+              https://doi.org/10.1289/ehp.1103639.
+            </li>
+          </ol>
         </li>
 
         <li>
-          Cigarette smoke particles are almost entirely under 1 micron in size(1) and remain under 2.5 microns when accounting for humidity in the throat(2).
+          Cigarette smoke particles are almost entirely under 1 micron in
+          size(1) and remain under 2.5 microns when accounting for humidity in
+          the throat(2).
           <ol>
-            <li>Anderson, Paula J., J. Douglas Wilson, and F. Charles Hiller. “Particle Size Distribution of Mainstream Tobacco and Marijuana Smoke: Analysis Using the Electrical Aerosol Analyzer.” American Review of Respiratory Disease 140, no. 1 (July 1989): 202–5. https://doi.org/10.1164/ajrccm/140.1.202</li>
-            <li>Ishizu, Y., K. Ohta, and T. Okada. “The Effect of Moisture on the Growth of Cigarette Smoke Particles.” Beiträge Zur Tabakforschung / Contributions to Tobacco Research 10, no. 3 (January 1, 1980). https://doi.org/10.2478/cttr-2013-0486</li>
+            <li>
+              Anderson, Paula J., J. Douglas Wilson, and F. Charles Hiller.
+              “Particle Size Distribution of Mainstream Tobacco and Marijuana
+              Smoke: Analysis Using the Electrical Aerosol Analyzer.” American
+              Review of Respiratory Disease 140, no. 1 (July 1989): 202–5.
+              https://doi.org/10.1164/ajrccm/140.1.202
+            </li>
+            <li>
+              Ishizu, Y., K. Ohta, and T. Okada. “The Effect of Moisture on the
+              Growth of Cigarette Smoke Particles.” Beiträge Zur Tabakforschung
+              / Contributions to Tobacco Research 10, no. 3 (January 1, 1980).
+              https://doi.org/10.2478/cttr-2013-0486
+            </li>
           </ol>
         </li>
       </ul>
