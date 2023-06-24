@@ -11,6 +11,7 @@ import * as dom from "./DOM";
 // consider 1 day air pollution effects on hospitalization
 // consider plots for large masses as well
 // flex input output together
+// change info refs to [] from ()
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
