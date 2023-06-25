@@ -10,8 +10,6 @@ import * as dom from "./DOM";
 // see if importing to dom could steamline some pieces
 // consider 1 day air pollution effects on hospitalization
 // consider plots for large masses as well
-// flex input output together
-// change info refs to [] from ()
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
@@ -56,12 +54,20 @@ for (let i = 0; i < 1201; i += 1) {
 }
 console.log(plotMass);
 
+const largePlotMass = [];
+let largeMass = 0;
+for (let i = 0; i < 1201; i += 1) {
+  largePlotMass.push(largeMass);
+  largeMass += 0.5;
+}
+console.log(largePlotMass);
+
 const plotRelativeRiskCVD = [];
 for (let i = 0; i < plotMass.length; i += 1) {
   const risk = utils.calculateRelativeRiskCVDMortality(plotMass[i], false);
   plotRelativeRiskCVD.push(risk);
 }
-console.log(plotRelativeRiskCVD);
+// console.log(plotRelativeRiskCVD);
 
 const plotRelativeRiskLungCancer = [];
 for (let i = 0; i < plotMass.length; i += 1) {
