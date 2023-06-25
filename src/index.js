@@ -78,20 +78,19 @@ for (let i = 0; i < plotMass.length; i += 1) {
   plotRelativeRiskLungCancer.push(risk);
 }
 
+const dataCVD = [
+  {
+    x: plotMass,
+    y: plotRelativeRiskCVD,
+    mode: "lines",
+    name: "spline",
+    line: { shape: "spline", color: "rgb(217, 14, 0)" },
+  },
+];
+
 Plotly.newPlot(
   "testPlot",
-
-  // data
-  [
-    {
-      x: plotMass,
-      y: plotRelativeRiskCVD,
-      mode: "lines",
-      name: "spline",
-      line: { shape: "spline", color: "rgb(217, 14, 0)" },
-    },
-  ],
-
+  dataCVD,
   // layout
   {
     // width: 400,
