@@ -10,6 +10,7 @@ import * as dom from "./DOM";
 // see if importing to dom could steamline some pieces
 // consider 1 day air pollution effects on hospitalization
 // consider plots for large masses as well
+// large masses on inset plots
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
