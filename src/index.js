@@ -11,6 +11,9 @@ import * as dom from "./DOM";
 // consider 1 day air pollution effects on hospitalization
 // consider plots for large masses as well
 // large masses on inset plots
+// fix modal overflow problem
+// check rel. risks on exercise greater than 24 hours.
+// reorder info modal
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {

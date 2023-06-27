@@ -140,12 +140,18 @@ export function calculateTotalExposureTime() {
 }
 
 export function calculateUserPM25Mass(day) {
+  // day arg takes boolean to switch between raw user input and forced 24hr time period
   // final unit is in micrograms
   const PM25Concentration = PM25ConcentrationFromAQI(getUserAQI());
   let userRestingDuration = getUserRestingDuration();
-  const userExerciseDuration = getUserExerciseDuration();
+  let userExerciseDuration = getUserExerciseDuration();
 
-  if (day) userRestingDuration = 1440 - userExerciseDuration;
+  if (day) {
+    if (userExerciseDuration > 1440) userExerciseDuration = 1440;
+    userRestingDuration = 1440 - userExerciseDuration;
+  }
+
+  console.log(userExerciseDuration);
   console.log(userRestingDuration);
 
   // Resting Mass //
