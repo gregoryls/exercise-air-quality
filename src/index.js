@@ -71,7 +71,12 @@ for (let i = 0; i < plotMass.length; i += 1) {
   const risk = utils.calculateRelativeRiskCVDMortality(plotMass[i], false);
   plotRelativeRiskCVD.push(risk);
 }
-// console.log(plotRelativeRiskCVD);
+
+const plotRelativeRiskCVDLargeMass = [];
+for (let i = 0; i < largePlotMass.length; i += 1) {
+  const risk = utils.calculateRelativeRiskCVDMortality(largePlotMass[i], false);
+  plotRelativeRiskCVDLargeMass.push(risk);
+}
 
 const plotRelativeRiskLungCancer = [];
 for (let i = 0; i < plotMass.length; i += 1) {
@@ -80,6 +85,15 @@ for (let i = 0; i < plotMass.length; i += 1) {
     false
   );
   plotRelativeRiskLungCancer.push(risk);
+}
+
+const plotRelativeRiskLungCancerLargeMass = [];
+for (let i = 0; i < largePlotMass.length; i += 1) {
+  const risk = utils.calculateRelativeRiskLungCancerMortality(
+    largePlotMass[i],
+    false
+  );
+  plotRelativeRiskLungCancerLargeMass.push(risk);
 }
 
 const dataCVD = [
@@ -106,6 +120,16 @@ const layoutCVD = {
   hovermode: "closest",
   hoverdistance: -1,
 };
+
+const dataLargeCVD = [
+  {
+    x: largePlotMass,
+    y: plotRelativeRiskCVD,
+    mode: "lines",
+    name: "spline",
+    line: { shape: "spline", color: "rgb(217, 14, 0)" },
+  },
+];
 
 const configGeneric = { responsive: true };
 
