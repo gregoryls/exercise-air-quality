@@ -143,6 +143,16 @@ const dataLungCancer = [
   },
 ];
 
+const dataLungCancerLargeMass = [
+  {
+    x: largePlotMass,
+    y: plotRelativeRiskLungCancerLargeMass,
+    mode: "lines",
+    name: "spline",
+    line: { shape: "spline", color: "rgb(217, 14, 0)" },
+  },
+];
+
 const layoutLungCancer = {
   paper_bgcolor: "#00000000",
   plot_bgcolor: "#c1f0c1",
@@ -164,6 +174,12 @@ Plotly.newPlot(
   configGeneric
 );
 Plotly.newPlot("CVDPlotLargeMass", dataCVDLargeMass, layoutCVD, configGeneric);
+Plotly.newPlot(
+  "lungCancerPlotLargeMass",
+  dataLungCancerLargeMass,
+  layoutLungCancer,
+  configGeneric
+);
 
 const infoModalButton = document.getElementById("infoModalButton");
 const infoModal = document.getElementById("modal");
