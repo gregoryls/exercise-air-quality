@@ -92,31 +92,24 @@ const dataCVD = [
   },
 ];
 
-Plotly.newPlot(
-  "testPlot",
-  dataCVD,
-  // layout
-  {
-    // width: 400,
-    // height: 400,
+const layoutCVD = {
+  paper_bgcolor: "#00000000",
+  plot_bgcolor: "#c1f0c1",
+  font: { color: "black" },
 
-    paper_bgcolor: "#00000000",
-    plot_bgcolor: "#c1f0c1",
-    font: { color: "black" },
-
-    title: "Relative Risk CVD Mortality",
-    xaxis: {
-      title: "Chronic Daily Exposure of PM2.5 mass (mg)",
-      gridcolor: "black",
-    },
-    yaxis: { title: "Relative Risk", gridcolor: "black" },
-    hovermode: "closest",
-    hoverdistance: -1,
+  title: "Relative Risk CVD Mortality",
+  xaxis: {
+    title: "Chronic Daily Exposure of PM2.5 mass (mg)",
+    gridcolor: "black",
   },
+  yaxis: { title: "Relative Risk", gridcolor: "black" },
+  hovermode: "closest",
+  hoverdistance: -1,
+};
 
-  // config
-  { responsive: true }
-);
+const configCVD = { responsive: true };
+
+Plotly.newPlot("testPlot", dataCVD, layoutCVD, configCVD);
 
 Plotly.newPlot(
   "testPlot2",
