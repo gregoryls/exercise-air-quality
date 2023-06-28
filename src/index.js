@@ -103,27 +103,44 @@ const dataCVD = {
   name: "spline",
   line: { shape: "spline", color: "rgb(217, 14, 0)" },
 };
-const layoutCVD = {
-  paper_bgcolor: "#00000000",
-  plot_bgcolor: "#c1f0c1",
-  font: { color: "black" },
-
-  title: "Relative Risk CVD Mortality",
-  xaxis: {
-    title: "Chronic Daily Exposure of PM2.5 mass (mg)",
-    gridcolor: "black",
-  },
-  yaxis: { title: "Relative Risk", gridcolor: "black" },
-  hovermode: "closest",
-  hoverdistance: -1,
-};
 
 const dataCVDLargeMass = {
   x: largePlotMass,
   y: plotRelativeRiskCVD,
+  xaxis: "x2",
+  yaxis: "y2",
   mode: "lines",
   name: "spline",
   line: { shape: "spline", color: "rgb(217, 14, 0)" },
+};
+
+const layoutCVD = {
+  paper_bgcolor: "#00000000",
+  plot_bgcolor: "#c1f0c1",
+  font: { color: "black" },
+  title: "Relative Risk CVD Mortality",
+
+  xaxis: {
+    title: "Chronic Daily Exposure of PM2.5 mass (mg)",
+    // gridcolor: "black",
+  },
+  yaxis: {
+    title: "Relative Risk",
+    // gridcolor: "black"
+  },
+  xaxis2: {
+    domain: [0.57, 0.97],
+    anchor: "y2",
+    // gridcolor: "black",
+  },
+  yaxis2: {
+    domain: [0.3, 0.7],
+    anchor: "x2",
+    // gridcolor: "black",
+  },
+
+  // hovermode: "closest",
+  // hoverdistance: -1,
 };
 
 const dataCVDCombined = [dataCVD, dataCVDLargeMass];
