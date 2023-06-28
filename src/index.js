@@ -121,7 +121,7 @@ const layoutCVD = {
   hoverdistance: -1,
 };
 
-const dataLargeCVD = [
+const dataCVDLargeMass = [
   {
     x: largePlotMass,
     y: plotRelativeRiskCVD,
@@ -163,6 +163,7 @@ Plotly.newPlot(
   layoutLungCancer,
   configGeneric
 );
+Plotly.newPlot("CVDPlotLargeMass", dataCVDLargeMass, layoutCVD, configGeneric);
 
 const infoModalButton = document.getElementById("infoModalButton");
 const infoModal = document.getElementById("modal");
