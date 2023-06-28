@@ -107,41 +107,33 @@ const layoutCVD = {
   hoverdistance: -1,
 };
 
-const configCVD = { responsive: true };
+const configGeneric = { responsive: true };
 
-Plotly.newPlot("testPlot", dataCVD, layoutCVD, configCVD);
-
-Plotly.newPlot(
-  "testPlot2",
-
-  // data
-  [
-    {
-      x: plotMass,
-      y: plotRelativeRiskLungCancer,
-      mode: "lines",
-      name: "spline",
-      line: { shape: "spline", color: "rgb(217, 14, 0)" },
-    },
-  ],
-
-  // layout
+const dataLungCancer = [
   {
-    paper_bgcolor: "#00000000",
-    plot_bgcolor: "#c1f0c1",
-    font: { color: "black" },
-
-    title: "Relative Risk Lung Cancer Mortality",
-    xaxis: {
-      title: "Chronic Daily Exposure of PM2.5 mass (mg)",
-      gridcolor: "black",
-    },
-    yaxis: { title: "Relative Risk", gridcolor: "black" },
+    x: plotMass,
+    y: plotRelativeRiskLungCancer,
+    mode: "lines",
+    name: "spline",
+    line: { shape: "spline", color: "rgb(217, 14, 0)" },
   },
+];
 
-  // config
-  { responsive: true }
-);
+const layoutLungCancer = {
+  paper_bgcolor: "#00000000",
+  plot_bgcolor: "#c1f0c1",
+  font: { color: "black" },
+
+  title: "Relative Risk Lung Cancer Mortality",
+  xaxis: {
+    title: "Chronic Daily Exposure of PM2.5 mass (mg)",
+    gridcolor: "black",
+  },
+  yaxis: { title: "Relative Risk", gridcolor: "black" },
+};
+
+Plotly.newPlot("testPlot", dataCVD, layoutCVD, configGeneric);
+Plotly.newPlot("testPlot2", dataLungCancer, layoutLungCancer, configGeneric);
 
 const infoModalButton = document.getElementById("infoModalButton");
 const infoModal = document.getElementById("modal");
