@@ -156,8 +156,13 @@ const layoutLungCancer = {
   yaxis: { title: "Relative Risk", gridcolor: "black" },
 };
 
-Plotly.newPlot("testPlot", dataCVD, layoutCVD, configGeneric);
-Plotly.newPlot("testPlot2", dataLungCancer, layoutLungCancer, configGeneric);
+Plotly.newPlot("CVDPlot", dataCVD, layoutCVD, configGeneric);
+Plotly.newPlot(
+  "lungCancerPlot",
+  dataLungCancer,
+  layoutLungCancer,
+  configGeneric
+);
 
 const infoModalButton = document.getElementById("infoModalButton");
 const infoModal = document.getElementById("modal");
