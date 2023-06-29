@@ -107,7 +107,7 @@ const dataCVD = {
 
 const dataCVDLargeMass = {
   x: largePlotMass,
-  y: plotRelativeRiskCVD,
+  y: plotRelativeRiskCVDLargeMass,
   xaxis: "x2",
   yaxis: "y2",
   mode: "lines",
