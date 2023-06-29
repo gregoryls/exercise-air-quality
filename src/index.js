@@ -198,7 +198,7 @@ const layoutLungCancer = {
     anchor: "y2",
   },
   yaxis2: {
-    domain: [0.3, 0.7],
+    domain: [0.15, 0.55],
     anchor: "x2",
   },
 };
