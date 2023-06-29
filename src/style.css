@@ -55,6 +55,12 @@ h2 {
   margin: 0;
 }
 
+#gender {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
 #submitData {
   width: 175px;
 }

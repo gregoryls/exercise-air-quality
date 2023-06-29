@@ -7,7 +7,7 @@ export function calculateMinuteVentilationFromHeartRate(heartRate) {
   if (heartRate === 0) return 0;
 
   // boolean for user selection of 'Female?' checkbox
-  const checkFemale = document.getElementById("genderCheckbox").checked;
+  const checkFemale = document.getElementById("female").checked;
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
 
   // convert standard Liters/minute units to m^3/minute to match with standard pm2.5 concentration units
