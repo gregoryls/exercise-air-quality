@@ -30,7 +30,7 @@ h2 {
   width: 450px;
   height: 324px;
   gap: 16px;
-  background-color: #a2d9d8;
+  background-color: #c5d995;
   border-radius: 8px;
 }
 
@@ -41,7 +41,7 @@ h2 {
 
 #restingWrap,
 #exerciseWrap {
-  background-color: #a5a1ff;
+  background-color: #a995d9;
   border-radius: 8px;
   width: 200px;
   display: flex;
@@ -67,7 +67,7 @@ h2 {
 }
 
 #calculatorOutput {
-  background-color: #ca8b91;
+  background-color: #95d9cb;
   padding: 10px;
   width: 450px;
 
@@ -78,7 +78,7 @@ h2 {
 
 #massCigaretteOutput,
 #relativeRisks {
-  background-color: #a5a1ff;
+  background-color: #a995d9;
   border-radius: 8px;
   padding: 10px;
 }
@@ -100,7 +100,7 @@ h2 {
 }
 
 .js-plotly-plot {
-  background-color: #ceecec;
+  background-color: #d995a3;
   border-radius: 8px;
   margin-bottom: 20px;
 }
