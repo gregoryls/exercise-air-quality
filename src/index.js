@@ -76,6 +76,7 @@ const plotRelativeRiskCVDLargeMass = [];
 for (let i = 0; i < largePlotMass.length; i += 1) {
   const risk = utils.calculateRelativeRiskCVDMortality(largePlotMass[i], false);
   plotRelativeRiskCVDLargeMass.push(risk);
+  console.log(risk);
 }
 
 const plotRelativeRiskLungCancer = [];
@@ -142,28 +143,6 @@ const layoutCVD = {
 
 const dataCVDCombined = [dataCVD, dataCVDLargeMass];
 
-// const layoutCVDLargeMass = {
-//   paper_bgcolor: "#00000000",
-//   plot_bgcolor: "#c1f0c1",
-//   font: { color: "black" },
-//   title: "Relative Risk CVD Mortality",
-
-//   domain: {
-//     x: [0.7, 1],
-//     y: [0, 0.3],
-//   },
-//   xaxis: {
-//     title: "Chronic Daily Exposure of PM2.5 mass (mg)",
-//     gridcolor: "black",
-//   },
-//   yaxis: {
-//     title: "Relative Risk",
-//     gridcolor: "black",
-//   },
-//   hovermode: "closest",
-//   hoverdistance: -1,
-// };
-
 const configGeneric = { responsive: true };
 
 const dataLungCancer = {
@@ -207,18 +186,6 @@ Plotly.newPlot("CVDPlot", dataCVDCombined, layoutCVD, configGeneric);
 Plotly.newPlot(
   "lungCancerPlot",
   dataLungCancerCombined,
-  layoutLungCancer,
-  configGeneric
-);
-// Plotly.newPlot(
-//   "CVDPlotLargeMass",
-//   dataCVDLargeMass,
-//   layoutCVDLargeMass,
-//   configGeneric
-// );
-Plotly.newPlot(
-  "lungCancerPlotLargeMass",
-  dataLungCancerLargeMass,
   layoutLungCancer,
   configGeneric
 );
