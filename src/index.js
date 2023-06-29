@@ -169,26 +169,24 @@ const dataCVDCombined = [dataCVD, dataCVDLargeMass];
 
 const configGeneric = { responsive: true };
 
-const dataLungCancer = [
-  {
-    x: plotMass,
-    y: plotRelativeRiskLungCancer,
-    mode: "lines",
-    name: "spline",
-    line: { shape: "spline", color: "rgb(217, 14, 0)" },
-  },
-];
+const dataLungCancer = {
+  x: plotMass,
+  y: plotRelativeRiskLungCancer,
+  mode: "lines",
+  name: "spline",
+  line: { shape: "spline", color: "rgb(217, 14, 0)" },
+};
+const dataLungCancerLargeMass = {
+  x: largePlotMass,
+  y: plotRelativeRiskLungCancerLargeMass,
+  xaxis: "x2",
+  yaxis: "y2",
+  mode: "lines",
+  name: "spline",
+  line: { shape: "spline", color: "rgb(217, 14, 0)" },
+};
 
-const dataLungCancerLargeMass = [
-  {
-    x: largePlotMass,
-    y: plotRelativeRiskLungCancerLargeMass,
-    mode: "lines",
-    name: "spline",
-    line: { shape: "spline", color: "rgb(217, 14, 0)" },
-  },
-];
-
+const dataLungCancerCombined = [dataLungCancer, dataLungCancerLargeMass];
 const layoutLungCancer = {
   paper_bgcolor: "#00000000",
   plot_bgcolor: "#c1f0c1",
@@ -200,12 +198,22 @@ const layoutLungCancer = {
     gridcolor: "black",
   },
   yaxis: { title: "Relative Risk", gridcolor: "black" },
+  xaxis2: {
+    domain: [0.57, 0.97],
+    anchor: "y2",
+    // gridcolor: "black",
+  },
+  yaxis2: {
+    domain: [0.3, 0.7],
+    anchor: "x2",
+    // gridcolor: "black",
+  },
 };
 
 Plotly.newPlot("CVDPlot", dataCVDCombined, layoutCVD, configGeneric);
 Plotly.newPlot(
   "lungCancerPlot",
-  dataLungCancer,
+  dataLungCancerCombined,
   layoutLungCancer,
   configGeneric
 );
