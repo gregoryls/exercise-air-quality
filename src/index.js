@@ -134,6 +134,7 @@ const layoutCVD = {
     domain: [0.3, 0.7],
     anchor: "x2",
   },
+  showlegend: false,
 
   // hovermode: "closest",
   // hoverdistance: -1,
@@ -169,7 +170,6 @@ const dataLungCancer = {
   x: plotMass,
   y: plotRelativeRiskLungCancer,
   mode: "lines",
-  name: "spline",
   line: { shape: "spline", color: "rgb(217, 14, 0)" },
 };
 const dataLungCancerLargeMass = {
@@ -178,7 +178,6 @@ const dataLungCancerLargeMass = {
   xaxis: "x2",
   yaxis: "y2",
   mode: "lines",
-  name: "spline",
   line: { shape: "spline", color: "rgb(217, 14, 0)" },
 };
 
@@ -201,6 +200,7 @@ const layoutLungCancer = {
     domain: [0.15, 0.55],
     anchor: "x2",
   },
+  showlegend: false,
 };
 
 Plotly.newPlot("CVDPlot", dataCVDCombined, layoutCVD, configGeneric);
