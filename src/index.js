@@ -117,7 +117,7 @@ const dataCVDLargeMass = {
 
 const layoutCVD = {
   paper_bgcolor: "#00000000",
-  plot_bgcolor: "#c1f0c1",
+  plot_bgcolor: "#e4e2e6",
   font: { color: "black" },
   title: "Relative Risk CVD Mortality",
 
@@ -163,7 +163,7 @@ const dataLungCancerLargeMass = {
 const dataLungCancerCombined = [dataLungCancer, dataLungCancerLargeMass];
 const layoutLungCancer = {
   paper_bgcolor: "#00000000",
-  plot_bgcolor: "#c1f0c1",
+  plot_bgcolor: "#e4e2e6",
   font: { color: "black" },
 
   title: "Relative Risk Lung Cancer Mortality",
