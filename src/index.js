@@ -122,21 +122,17 @@ const layoutCVD = {
 
   xaxis: {
     title: "Chronic Daily Exposure of PM2.5 mass (mg)",
-    // gridcolor: "black",
   },
   yaxis: {
     title: "Relative Risk",
-    // gridcolor: "black"
   },
   xaxis2: {
     domain: [0.57, 0.97],
     anchor: "y2",
-    // gridcolor: "black",
   },
   yaxis2: {
     domain: [0.3, 0.7],
     anchor: "x2",
-    // gridcolor: "black",
   },
 
   // hovermode: "closest",
@@ -195,18 +191,15 @@ const layoutLungCancer = {
   title: "Relative Risk Lung Cancer Mortality",
   xaxis: {
     title: "Chronic Daily Exposure of PM2.5 mass (mg)",
-    gridcolor: "black",
   },
-  yaxis: { title: "Relative Risk", gridcolor: "black" },
+  yaxis: { title: "Relative Risk" },
   xaxis2: {
     domain: [0.57, 0.97],
     anchor: "y2",
-    // gridcolor: "black",
   },
   yaxis2: {
     domain: [0.3, 0.7],
     anchor: "x2",
-    // gridcolor: "black",
   },
 };
 
