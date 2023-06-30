@@ -145,29 +145,33 @@
       <h2>Information</h2>
       <ul>
         <li>
-          Minute Ventilation (liters of air breathed per minute) can be
-          accurately estimated based on heart rate[1]. The concentration of
-          PM2.5 can be calculated from AQI[2] and combined with exposure time
-          the total PM2.5 mass breathed can be calculated.
-          <ol>
+          Using the Calculator:
+          <ul>
             <li>
-              Cruz, Ramon, Danilo L. Alves, Eduardo Rumenig, Renata Gonçalves,
-              Edson Degaki, Leonardo Pasqua, Sarah Koch, Adriano E. Lima-Silva,
-              Michael S. Koehle, and Romulo Bertuzzi. “Estimation of Minute
-              Ventilation by Heart Rate for Field Exercise Studies.” Scientific
-              Reports 10, no. 1 (January 29, 2020): 1423.
-              <a href="https://doi.org/10.1038/s41598-020-58253-7"
-                >https://doi.org/10.1038/s41598-020-58253-7</a
-              >
+              In the input box, enter your resting heart rate, the hours of
+              exposure to pm2.5 pollution, and the average AQI during that time.
+              Optionally, exercise exposure can be added with inclusion of
+              average heart rate for the exercise and it's duration. Gender is
+              queried due to smaller lung size in females.
             </li>
             <li>
-              <a
-                href="https://www.epa.gov/outdoor-air-quality-data/how-aqi-calculated"
-                >https://www.epa.gov/outdoor-air-quality-data/how-aqi-calculated</a
-              >
+              The upper output box will show the pm2.5 mass breathed and what
+              percentage of a cigarrete that amounts to after calculating. This
+              uses the resting state data and adds on additional exercise data
+              to get a total exposure.
             </li>
-          </ol>
+            <li>
+              The lower output box shows the relative risk of death due to lung
+              cancer or cardiovascular disease (including ischemic heart
+              disease(IHD) and cardiopulmonary disease(CPD)) compared to someone
+              with no pollution exposure. Relative risks are calculated assuming
+              a 24 hour exposure period - first, any exercise duration is
+              calculated and then whatever amount of time remaining to reach 24
+              hours exposure is calculated using resting state data.
+            </li>
+          </ul>
         </li>
+
         <li>
           The calcultor defaults to a male user, but if the female box is
           checked minute ventilation is reduced to 75%. This is done because on
@@ -240,7 +244,30 @@
             </li>
           </ol>
         </li>
-
+        <li>
+          Minute Ventilation (liters of air breathed per minute) can be
+          accurately estimated based on heart rate[1]. The concentration of
+          PM2.5 can be calculated from AQI[2] and combined with exposure time
+          the total PM2.5 mass breathed can be calculated.
+          <ol>
+            <li>
+              Cruz, Ramon, Danilo L. Alves, Eduardo Rumenig, Renata Gonçalves,
+              Edson Degaki, Leonardo Pasqua, Sarah Koch, Adriano E. Lima-Silva,
+              Michael S. Koehle, and Romulo Bertuzzi. “Estimation of Minute
+              Ventilation by Heart Rate for Field Exercise Studies.” Scientific
+              Reports 10, no. 1 (January 29, 2020): 1423.
+              <a href="https://doi.org/10.1038/s41598-020-58253-7"
+                >https://doi.org/10.1038/s41598-020-58253-7</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.epa.gov/outdoor-air-quality-data/how-aqi-calculated"
+                >https://www.epa.gov/outdoor-air-quality-data/how-aqi-calculated</a
+              >
+            </li>
+          </ol>
+        </li>
         <li>
           What about acute exposure? It is difficult to measure the effects of
           short-term exposure, but there is evidence that a change of 10μg/m^3
@@ -259,34 +286,6 @@
               >
             </li>
           </ol>
-        </li>
-
-        <li>
-          Using the Calculator:
-          <ul>
-            <li>
-              In the input box, enter your resting heart rate, the hours of
-              exposure to pm2.5 pollution, and the average AQI during that time.
-              Optionally, exercise exposure can be added with inclusion of
-              average heart rate for the exercise and it's duration. Gender is
-              queried due to smaller lung size in females.
-            </li>
-            <li>
-              The upper output box will show the pm2.5 mass breathed and what
-              percentage of a cigarrete that amounts to after calculating. This
-              uses the resting state data and adds on additional exercise data
-              to get a total exposure.
-            </li>
-            <li>
-              The lower output box shows the relative risk of death due to lung
-              cancer or cardiovascular disease (including ischemic heart
-              disease(IHD) and cardiopulmonary disease(CPD)) compared to someone
-              with no pollution exposure. Relative risks are calculated assuming
-              a 24 hour exposure period - first, any exercise duration is
-              calculated and then whatever amount of time remaining to reach 24
-              hours exposure is calculated using resting state data.
-            </li>
-          </ul>
         </li>
       </ul>
     </div>
