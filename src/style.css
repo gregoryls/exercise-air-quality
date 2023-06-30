@@ -110,11 +110,11 @@ h2 {
 }
 
 .modal {
-  background-color: gray;
+  background-color: #cacacc;
   border-radius: 8px;
   padding: 10px;
   width: 75vw;
-  height: 80vh;
+  /* height: 80vh; */
   position: fixed;
   top: 10%;
   overflow: auto;
@@ -130,4 +130,8 @@ h2 {
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
+}
+
+#modal ol li {
+  font-size: 12px;
 }

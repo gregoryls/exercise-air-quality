@@ -9,10 +9,6 @@ import * as dom from "./DOM";
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
 // consider 1 day air pollution effects on hospitalization
-// consider plots for large masses as well
-// large masses on inset plots
-// fix modal overflow problem
-// check rel. risks on exercise greater than 24 hours.
 // reorder info modal
 
 const submitButton = document.getElementById("submitData");
