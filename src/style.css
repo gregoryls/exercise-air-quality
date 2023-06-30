@@ -124,7 +124,7 @@ h2 {
   border-radius: 8px;
   padding: 10px;
   width: 75vw;
-  /* height: 80vh; */
+  height: 80vh;
   position: fixed;
   top: 10%;
   overflow: auto;
@@ -142,6 +142,10 @@ h2 {
   backdrop-filter: blur(3px);
 }
 
+#modal ul > li {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
 #modal ol li {
   font-size: 12px;
 }
