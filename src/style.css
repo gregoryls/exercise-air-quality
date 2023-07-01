@@ -41,7 +41,7 @@ h2 {
 
 #restingWrap,
 #exerciseWrap {
-  background-color: #a995d9;
+  background-color: #95d9cb;
   border-radius: 8px;
   width: 200px;
   display: flex;
@@ -64,10 +64,11 @@ h2 {
 
 #submitData {
   width: 175px;
+  cursor: pointer;
 }
 
 #calculatorOutput {
-  background-color: #95d9cb;
+  background-color: #c5d995;
   padding: 10px;
   width: 450px;
 
@@ -78,7 +79,7 @@ h2 {
 
 #massCigaretteOutput,
 #relativeRisks {
-  background-color: #a995d9;
+  background-color: #95d9cb;
   border-radius: 8px;
   padding: 10px;
 }
@@ -98,10 +99,13 @@ h2 {
   padding: 10px;
   font-size: 16px;
   font-weight: 550;
-  background-color: #a995d9;
+  background-color: #c5d995;
   /* border: none; */
   border-radius: 8px;
   cursor: pointer;
+}
+#infoModalButton:hover {
+  background-color: #b0c486;
 }
 
 #plotContent {

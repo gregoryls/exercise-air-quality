@@ -9,8 +9,7 @@ import * as dom from "./DOM";
 // warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
 // consider 1 day air pollution effects on hospitalization
-// reorder info modal
-
+// triadic color scheme
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
   const form = document.getElementById("inputForm");
