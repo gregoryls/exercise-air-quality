@@ -3,26 +3,15 @@ import Plotly from "plotly.js-dist-min";
 import * as utils from "./math";
 import * as dom from "./DOM";
 
-// console.log(utils.PM25ConcentrationFromAQI(401));
-// console.log(utils.calculateMinuteVentilationFromHeartRate(60));
-
-// warning sign about how hours calculated, exercise + resting added give example of 23 + 1 for 24
 // see if importing to dom could steamline some pieces
-// consider 1 day air pollution effects on hospitalization
-// triadic color scheme
+// cleanup
+
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
   const form = document.getElementById("inputForm");
   if (form.checkValidity()) {
     const PM25MassBreathed = utils.calculateUserPM25Mass();
     const PM25MassBreathed24Hour = utils.calculateUserPM25Mass(true);
-    // console.log(utils.getUserExerciseDuration());
-    // console.log(utils.getUserAQI());
-    // console.log(utils.PM25ConcentrationFromAQI(100));
-    // console.log(utils.calculateUserPM25Mass());
-    // console.log(
-    //   utils.convertToCigarettePercentage(utils.calculateUserPM25Mass())
-    // );
     dom.insertUserPM25Breathed(PM25MassBreathed);
     dom.insertUserCigarettePercentage(
       utils.convertToCigarettePercentage(PM25MassBreathed)
@@ -131,9 +120,6 @@ const layoutCVD = {
     anchor: "x2",
   },
   showlegend: false,
-
-  // hovermode: "closest",
-  // hoverdistance: -1,
 };
 
 const dataCVDCombined = [dataCVD, dataCVDLargeMass];
