@@ -111,12 +111,13 @@ h2 {
 }
 
 #plotContent {
+  width: 100%;
 }
 
 .js-plotly-plot {
-  /* background-color: #c5d995; */
-  /* border-radius: 8px; */
-  /* margin-bottom: 20px; */
+  background-color: #c5d995;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .hidden {
