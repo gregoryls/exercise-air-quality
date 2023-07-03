@@ -87,15 +87,17 @@ h2 {
 
 #massOutput,
 #cigarettePercentage {
-  /* display: flex; */
-  /* align-items: center; */
-  /* gap: 0.2rem; */
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
 }
 
 #relativeRisks ul {
-  /* list-style-type: none; */
+  list-style-type: circle;
 }
-
+#relativeRisks ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
 #infoModalButton {
   /* padding: 10px; */
   /* font-size: 16px; */
