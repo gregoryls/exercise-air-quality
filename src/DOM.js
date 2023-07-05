@@ -34,7 +34,7 @@ export function removeClass(element, className) {
 export function toggleHidden(element) {
   const elem = document.getElementById(element);
 
-  if (elem.style.display === "none") {
+  if (elem.style.display === "none" || elem.style.display === "") {
     elem.style.display = "block";
   } else {
     elem.style.display = "none";
