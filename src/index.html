@@ -108,6 +108,7 @@
           <button id="submitData" type="submit">Calculate</button>
         </form>
       </div>
+
       <div id="calculatorOutput">
         <h2>Output</h2>
         <div id="massCigaretteOutput">
@@ -136,6 +137,36 @@
 
     <button id="infoModalButton">Information</button>
 
+    <button id="CalculatorInstructions">Instructions</button>
+
+    <div>
+      Using the calculator:
+      <ul>
+        <li>
+          In the input box, enter your resting heart rate, the hours of exposure
+          to pm2.5 pollution, and the average AQI during that time. Optionally,
+          exercise exposure can be added with inclusion of average heart rate
+          for the exercise and it's duration. Gender is queried due to smaller
+          lung size in females.
+        </li>
+        <li>
+          The upper output box will show the pm2.5 mass breathed and what
+          percentage of a cigarrete that amounts to after calculating. This uses
+          the resting state data and adds on additional exercise data to get a
+          total exposure.
+        </li>
+        <li>
+          The lower output box shows the relative risk of death due to lung
+          cancer or cardiovascular disease (including ischemic heart
+          disease(IHD) and cardiopulmonary disease(CPD)) compared to someone
+          with no pollution exposure. Relative risks are calculated assuming a
+          24 hour exposure period - first, any exercise duration is calculated
+          and then whatever amount of time remaining to reach 24 hours exposure
+          is calculated using resting state data.
+        </li>
+      </ul>
+    </div>
+
     <div id="plotContent">
       <div id="CVDPlot"></div>
       <div id="lungCancerPlot"></div>
@@ -144,34 +175,6 @@
     <div id="modal" class="modal hidden">
       <h2>Information</h2>
       <ul>
-        <li>
-          Using the calculator:
-          <ul>
-            <li>
-              In the input box, enter your resting heart rate, the hours of
-              exposure to pm2.5 pollution, and the average AQI during that time.
-              Optionally, exercise exposure can be added with inclusion of
-              average heart rate for the exercise and it's duration. Gender is
-              queried due to smaller lung size in females.
-            </li>
-            <li>
-              The upper output box will show the pm2.5 mass breathed and what
-              percentage of a cigarrete that amounts to after calculating. This
-              uses the resting state data and adds on additional exercise data
-              to get a total exposure.
-            </li>
-            <li>
-              The lower output box shows the relative risk of death due to lung
-              cancer or cardiovascular disease (including ischemic heart
-              disease(IHD) and cardiopulmonary disease(CPD)) compared to someone
-              with no pollution exposure. Relative risks are calculated assuming
-              a 24 hour exposure period - first, any exercise duration is
-              calculated and then whatever amount of time remaining to reach 24
-              hours exposure is calculated using resting state data.
-            </li>
-          </ul>
-        </li>
-
         <li>
           The calcultor defaults to a male user, but if the female box is
           checked minute ventilation is reduced to 75%. This is done because on
