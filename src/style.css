@@ -96,6 +96,11 @@ h2 {
 #relativeRisks ul li:not(:last-child) {
   margin-bottom: 10px;
 }
+
+#calculatorInstructions {
+  display: none;
+}
+
 #infoModalButton {
   padding: 10px;
   font-size: 16px;

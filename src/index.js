@@ -6,6 +6,14 @@ import * as dom from "./DOM";
 // see if importing to dom could steamline some pieces
 // cleanup
 // require gender radio
+// clean up exports
+
+const instructionsButton = document.getElementById(
+  "calculatorInstructionsButton"
+);
+instructionsButton.addEventListener("click", () => {
+  dom.toggleHidden("calculatorInstructions");
+});
 
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
