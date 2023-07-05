@@ -30,3 +30,13 @@ export function addClass(element, className) {
 export function removeClass(element, className) {
   element.classList.remove(className);
 }
+
+export function toggleHidden(element) {
+  const elem = document.getElementById(element);
+
+  if (elem.style.display === "none") {
+    elem.style.display = "block";
+  } else {
+    elem.style.display = "none";
+  }
+}
