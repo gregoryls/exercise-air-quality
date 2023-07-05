@@ -3,7 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 16px;
   min-height: 100vh;
   color: #1b1b1e;
 }
@@ -97,8 +97,14 @@ h2 {
   margin-bottom: 10px;
 }
 
+#calculatorInstructionsButton {
+  /* align-self: baseline; */
+}
 #calculatorInstructions {
   display: none;
+  background-color: #c5d995;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 #infoModalButton {
