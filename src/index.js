@@ -41,7 +41,7 @@ submitButton.addEventListener("click", () => {
     );
   }
 });
-console.log(utils.calculateRelativeRiskCVDMortality(60));
+// console.log(utils.calculateRelativeRiskCVDMortality(60));
 
 const plotMass = [];
 let mass = 0;
@@ -57,7 +57,7 @@ for (let i = 0; i < 1201; i += 1) {
   largePlotMass.push(largeMass);
   largeMass += 0.5;
 }
-console.log(largePlotMass);
+// console.log(largePlotMass);
 
 const plotRelativeRiskCVD = [];
 for (let i = 0; i < plotMass.length; i += 1) {
@@ -69,7 +69,7 @@ const plotRelativeRiskCVDLargeMass = [];
 for (let i = 0; i < largePlotMass.length; i += 1) {
   const risk = utils.calculateRelativeRiskCVDMortality(largePlotMass[i], false);
   plotRelativeRiskCVDLargeMass.push(risk);
-  console.log(risk);
+  // console.log(risk);
 }
 
 const plotRelativeRiskLungCancer = [];

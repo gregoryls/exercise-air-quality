@@ -151,8 +151,8 @@ export function calculateUserPM25Mass(day) {
     userRestingDuration = 1440 - userExerciseDuration;
   }
 
-  console.log(userExerciseDuration);
-  console.log(userRestingDuration);
+  // console.log(userExerciseDuration);
+  // console.log(userRestingDuration);
 
   // Resting Mass //
   const userRestingMinuteVolume = calculateMinuteVentilationFromHeartRate(
