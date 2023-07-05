@@ -98,13 +98,19 @@ h2 {
 }
 
 #calculatorInstructionsButton {
-  /* align-self: baseline; */
+  align-self: baseline;
 }
 #calculatorInstructions {
   display: none;
   background-color: #c5d995;
   padding: 10px;
   border-radius: 8px;
+}
+#calculatorInstructions h3 {
+  margin-top: 0;
+}
+#calculatorInstructions ul li:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 #infoModalButton {
@@ -179,6 +185,10 @@ h2 {
 
   #gender {
     flex-direction: row;
+  }
+
+  #calculatorInstructions {
+    /* margin: 0 17.5%; */
   }
 
   #plotContent {
