@@ -20,6 +20,11 @@ instructionsButton.addEventListener("click", () => {
   );
 });
 
+const infoModalButton = document.getElementById("infoModalButton");
+infoModalButton.addEventListener("click", () => {
+  dom.toggleHidden("modal", "infoModalButton", "Show Notes", "Hide Notes");
+});
+
 const submitButton = document.getElementById("submitData");
 submitButton.addEventListener("click", () => {
   const form = document.getElementById("inputForm");
@@ -185,16 +190,10 @@ Plotly.newPlot(
   configGeneric
 );
 
-const infoModalButton = document.getElementById("infoModalButton");
-const infoModal = document.getElementById("modal");
-const overlay = document.querySelector(".overlay");
+// const infoModal = document.getElementById("modal");
+// const overlay = document.querySelector(".overlay");
 
-infoModalButton.addEventListener("click", () => {
-  dom.removeClass(infoModal, "hidden");
-  dom.removeClass(overlay, "hidden");
-});
-
-overlay.addEventListener("click", () => {
-  dom.addClass(infoModal, "hidden");
-  dom.addClass(overlay, "hidden");
-});
+// overlay.addEventListener("click", () => {
+//   dom.addClass(infoModal, "hidden");
+//   dom.addClass(overlay, "hidden");
+// });
