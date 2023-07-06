@@ -31,12 +31,15 @@ export function removeClass(element, className) {
   element.classList.remove(className);
 }
 
-export function toggleHidden(element) {
+export function toggleHidden(element, button, text1, text2) {
   const elem = document.getElementById(element);
+  const btn = document.getElementById(button);
 
   if (elem.style.display === "none" || elem.style.display === "") {
     elem.style.display = "block";
+    btn.textContent = text2;
   } else {
     elem.style.display = "none";
+    btn.textContent = text1;
   }
 }
