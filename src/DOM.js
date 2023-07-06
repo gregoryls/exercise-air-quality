@@ -31,13 +31,14 @@ export function removeClass(element, className) {
   element.classList.remove(className);
 }
 
-export function toggleHidden(element, button, text1, text2) {
+export function toggleHidden(element, button, text1, text2, scroll) {
   const elem = document.getElementById(element);
   const btn = document.getElementById(button);
 
   if (elem.style.display === "none" || elem.style.display === "") {
     elem.style.display = "block";
     btn.textContent = text2;
+    if (scroll) elem.scrollIntoView({ block: "nearest" });
   } else {
     elem.style.display = "none";
     btn.textContent = text1;

@@ -16,13 +16,14 @@ instructionsButton.addEventListener("click", () => {
     "calculatorInstructions",
     "calculatorInstructionsButton",
     "Show Instructions",
-    "Hide Instructions"
+    "Hide Instructions",
+    true
   );
 });
 
 const notesButton = document.getElementById("notesButton");
 notesButton.addEventListener("click", () => {
-  dom.toggleHidden("notes", "notesButton", "Show Notes", "Hide Notes");
+  dom.toggleHidden("notes", "notesButton", "Show Notes", "Hide Notes", true);
 });
 
 const submitButton = document.getElementById("submitData");
