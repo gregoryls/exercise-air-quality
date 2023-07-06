@@ -113,7 +113,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-#infoModalButton {
+#notesButton {
   padding: 10px;
   font-size: 16px;
   font-weight: 550;
@@ -121,7 +121,7 @@ h2 {
   border-radius: 8px;
   cursor: pointer;
 }
-#infoModalButton:hover {
+#notesButton:hover {
   background-color: #c0808d;
 }
 
@@ -135,18 +135,18 @@ h2 {
   margin-bottom: 20px;
 }
 
-#modal {
+#notes {
   display: none;
   background-color: #c5d995;
   padding: 10px;
   border-radius: 8px;
 }
 
-#modal ul > li {
+#notes ul > li {
   font-size: 16px;
   margin-bottom: 10px;
 }
-#modal ol li {
+#notes ol li {
   font-size: 12px;
 }
 

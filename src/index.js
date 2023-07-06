@@ -20,9 +20,9 @@ instructionsButton.addEventListener("click", () => {
   );
 });
 
-const infoModalButton = document.getElementById("infoModalButton");
-infoModalButton.addEventListener("click", () => {
-  dom.toggleHidden("modal", "infoModalButton", "Show Notes", "Hide Notes");
+const notesButton = document.getElementById("notesButton");
+notesButton.addEventListener("click", () => {
+  dom.toggleHidden("notes", "notesButton", "Show Notes", "Hide Notes");
 });
 
 const submitButton = document.getElementById("submitData");
