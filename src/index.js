@@ -12,7 +12,12 @@ const instructionsButton = document.getElementById(
   "calculatorInstructionsButton"
 );
 instructionsButton.addEventListener("click", () => {
-  dom.toggleHidden("calculatorInstructions");
+  dom.toggleHidden(
+    "calculatorInstructions",
+    "calculatorInstructionsButton",
+    "Show Instructions",
+    "Hide Instructions"
+  );
 });
 
 const submitButton = document.getElementById("submitData");
