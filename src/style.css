@@ -101,6 +101,13 @@ h2 {
 
 #calculatorInstructionsButton {
   align-self: baseline;
+
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #e9afa3;
+  border-radius: 8px;
+  cursor: pointer;
 }
 #calculatorInstructions {
   display: none;
@@ -127,12 +134,14 @@ h2 {
 }
 
 #notesButton {
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
-  font-weight: 550;
+  font-weight: 400;
   background-color: #e9afa3;
   border-radius: 8px;
   cursor: pointer;
+
+  align-self: baseline;
 }
 #notesButton:hover {
   background-color: #c0808d;
