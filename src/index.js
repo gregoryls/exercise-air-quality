@@ -6,7 +6,6 @@ import * as dom from "./DOM";
 // see if importing to dom could steamline some pieces
 // cleanup
 // clean up exports
-// change refs to be toggled
 
 const instructionsButton = document.getElementById(
   "calculatorInstructionsButton"

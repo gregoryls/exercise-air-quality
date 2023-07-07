@@ -1,11 +1,11 @@
 body {
-  background-color: #fbfcf5;
+  background-color: #3a405a;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   min-height: 100vh;
-  color: #1b1b1e;
+  color: #ffffff;
 }
 
 h1,
@@ -28,6 +28,7 @@ h2 {
 
   gap: 10px;
   background-color: #c5d995;
+  color: #000000;
   border-radius: 8px;
 }
 
@@ -39,7 +40,7 @@ h2 {
 
 #restingWrap,
 #exerciseWrap {
-  background-color: #95d9cb;
+  background-color: #99b2dd;
   border-radius: 8px;
   /* width: 200px; */
   display: flex;
@@ -68,6 +69,7 @@ h2 {
 
 #calculatorOutput {
   background-color: #c5d995;
+  color: #000000;
   padding: 10px;
   /* width: 450px; */
   border-radius: 8px;
@@ -78,7 +80,7 @@ h2 {
 
 #massCigaretteOutput,
 #relativeRisks {
-  background-color: #95d9cb;
+  background-color: #99b2dd;
   border-radius: 8px;
   padding: 10px;
 }
@@ -103,6 +105,7 @@ h2 {
 #calculatorInstructions {
   display: none;
   background-color: #c5d995;
+  color: #000000;
   padding: 10px;
   border-radius: 8px;
 }
@@ -111,18 +114,6 @@ h2 {
 }
 #calculatorInstructions ul li:not(:last-child) {
   margin-bottom: 10px;
-}
-
-#notesButton {
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 550;
-  background-color: #d995a3;
-  border-radius: 8px;
-  cursor: pointer;
-}
-#notesButton:hover {
-  background-color: #c0808d;
 }
 
 #plotContent {
@@ -135,9 +126,22 @@ h2 {
   margin-bottom: 20px;
 }
 
+#notesButton {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 550;
+  background-color: #e9afa3;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#notesButton:hover {
+  background-color: #c0808d;
+}
+
 #notes {
   display: none;
   background-color: #c5d995;
+  color: #000000;
   padding: 10px;
   border-radius: 8px;
 }
