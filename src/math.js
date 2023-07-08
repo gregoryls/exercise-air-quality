@@ -2,7 +2,7 @@
 // PM2.5 = Particulate Matter 2.5 micrometer particles
 // Ve = Minute Ventilation, the amount of air breathed usually Liters/minute
 
-export function calculateMinuteVentilationFromHeartRate(heartRate) {
+function calculateMinuteVentilationFromHeartRate(heartRate) {
   // return 0 by force to avoid issues with exp(0) = 1 giving a small minute ventilation from heart rate of zero
   if (heartRate === 0) return 0;
 
@@ -18,7 +18,7 @@ export function calculateMinuteVentilationFromHeartRate(heartRate) {
   return minuteVentilationM3;
 }
 
-export function PM25ConcentrationFromAQI(AQI) {
+function PM25ConcentrationFromAQI(AQI) {
   let Ih;
   let Il;
   let BPh;
@@ -89,29 +89,29 @@ export function calculateRelativeRiskCVDMortality(mass, rounding) {
   return riskRounded;
 }
 
-export function calculateVolumeAirBreathed(minuteVentilation, minutes) {
+function calculateVolumeAirBreathed(minuteVentilation, minutes) {
   // units in m^3, based on minute ventilation function
   const volume = minuteVentilation * minutes;
   return volume;
 }
 
-export function calculatePM25MassBreathed(concentration, volume) {
+function calculatePM25MassBreathed(concentration, volume) {
   const PM25Mass = concentration * volume;
   return Number(PM25Mass);
 }
 
-export function getUserAQI() {
+function getUserAQI() {
   const userAQI = document.getElementById("userAQI");
   return Number(userAQI.value);
 }
 
 // Resting Inputs//
-export function getUserRestingHeartRate() {
+function getUserRestingHeartRate() {
   const userHeartRate = document.getElementById("userHeartRate");
   return Number(userHeartRate.value);
 }
 
-export function getUserRestingDuration() {
+function getUserRestingDuration() {
   let duration = document.getElementById("userRestingDuration");
   // convert input from hours to minutes
   duration = Number(duration.value * 60);
@@ -120,18 +120,18 @@ export function getUserRestingDuration() {
 // //
 
 // Exercise Inputs//
-export function getUserExerciseHeartRate() {
+function getUserExerciseHeartRate() {
   const exerciseHeartRate = document.getElementById("userExerciseHeartRate");
   return Number(exerciseHeartRate.value);
 }
 
-export function getUserExerciseDuration() {
+function getUserExerciseDuration() {
   const duration = document.getElementById("userExerciseDuration");
   return Number(duration.value);
 }
 // //
 
-export function calculateTotalExposureTime() {
+function calculateTotalExposureTime() {
   const restTime = getUserRestingDuration();
   const exerciseTime = getUserExerciseDuration();
   const totalTime = restTime + exerciseTime;
