@@ -131,14 +131,6 @@ function getUserExerciseDuration() {
 }
 // //
 
-function calculateTotalExposureTime() {
-  const restTime = getUserRestingDuration();
-  const exerciseTime = getUserExerciseDuration();
-  const totalTime = restTime + exerciseTime;
-
-  return totalTime;
-}
-
 export function calculateUserPM25Mass(day) {
   // day arg takes boolean to switch between raw user input and forced 24hr time period
   // final unit is in micrograms
