@@ -23,14 +23,6 @@ export function insertCVDMortality(relativeRisk) {
   CVDMortalityResult.textContent = `CVD mortality: ${relativeRisk}`;
 }
 
-export function addClass(element, className) {
-  element.classList.add(className);
-}
-
-export function removeClass(element, className) {
-  element.classList.remove(className);
-}
-
 export function toggleHidden(element, button, text1, text2, scroll) {
   const elem = document.getElementById(element);
   const btn = document.getElementById(button);
