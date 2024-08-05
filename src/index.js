@@ -5,7 +5,7 @@ import * as dom from "./DOM";
 
 // see if importing to dom could steamline some pieces
 // cleanup
-// clean up exports
+// organize index event listener code better
 
 const instructionsButton = document.getElementById(
   "calculatorInstructionsButton"
