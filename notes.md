@@ -32,3 +32,20 @@
 https://www.myhealthbeijing.com/china-public-health/air-pollution-or-smoking-which-is-worse-a-letter-from-dr-pope/
 
 https://www.myhealthbeijing.com/china-public-health/a-day-in-beijing-is-like-smoking-only-one-sixth-of-a-cigarette-its-almost-disappointing/
+
+| AQI Category        | AQI Range      | PM2.5 (µg/m³)               |
+| ------------------- | -------------- | --------------------------- |
+| Good                | 0-50           | 0.0-12.0                    |
+| Moderate            | 51-100         | 12.1-35.4                   |
+| Unhealthy for SG    | 101-150        | 35.5-55.4                   |
+| Unhealthy           | 151-200        | 55.5-150.4                  |
+| Very Unhealthy      | 201-300        | 150.5-250.4                 |
+| Hazardous           | 301-500        | 250.5-500.4                 |
+| Extremely Hazardous | 501-1000       | 500.5-1000                  |
+| Catastrophic        | 1001-2000      | 1001-10,000                 |
+| Super Catastrophic  | 2001-5000      | 10,001-100,000              |
+| Apocalyptic         | 5001-10,000    | 100,001-1,000,000           |
+| Beyond Apocalyptic  | 10,001-20,000  | 1,000,001-10,000,000        |
+| Ultra Apocalyptic   | 20,001-50,000  | 10,000,001-100,000,000      |
+| Hyper Apocalyptic   | 50,001-100,000 | 100,000,001-1,000,000,000   |
+| Mega Apocalyptic    | 100,001+       | 1,000,000,001-2,000,000,000 |
