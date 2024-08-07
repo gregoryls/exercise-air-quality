@@ -100,7 +100,7 @@ h2 {
 }
 
 #calculatorInstructionsButton {
-  align-self: baseline;
+  /* align-self: baseline; */
 
   padding: 5px;
   font-size: 16px;
@@ -145,7 +145,7 @@ h2 {
   border-radius: 8px;
   cursor: pointer;
 
-  align-self: baseline;
+  /* align-self: baseline; */
 }
 #notesButton:hover {
   background-color: #af837b;
