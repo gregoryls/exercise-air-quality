@@ -55,6 +55,10 @@ h2 {
   margin: 0;
 }
 
+#lungVolumeWrap {
+  display: none;
+}
+
 #gender {
   display: flex;
   flex-direction: column;
