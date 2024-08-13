@@ -11,7 +11,7 @@ const instructionsButton = document.getElementById(
   "calculatorInstructionsButton"
 );
 instructionsButton.addEventListener("click", () => {
-  dom.toggleHidden(
+  dom.toggleHiddenInfo(
     "calculatorInstructions",
     "calculatorInstructionsButton",
     "Show Instructions",
@@ -22,7 +22,13 @@ instructionsButton.addEventListener("click", () => {
 
 const notesButton = document.getElementById("notesButton");
 notesButton.addEventListener("click", () => {
-  dom.toggleHidden("notes", "notesButton", "Show Notes", "Hide Notes", true);
+  dom.toggleHiddenInfo(
+    "notes",
+    "notesButton",
+    "Show Notes",
+    "Hide Notes",
+    true
+  );
 });
 
 const submitButton = document.getElementById("submitData");
