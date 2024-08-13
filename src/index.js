@@ -57,7 +57,19 @@ submitButton.addEventListener("click", () => {
     );
   }
 });
-// console.log(utils.calculateRelativeRiskCVDMortality(60));
+
+const lungVolumeCheckbox = document.getElementById("lungVolumeCheckbox");
+const lungVolumeWrap = document.getElementById("lungVolumeWrap");
+lungVolumeCheckbox.addEventListener("change", () => {
+  if (
+    lungVolumeWrap.style.display === "none" ||
+    lungVolumeWrap.style.display === ""
+  ) {
+    lungVolumeWrap.style.display = "block";
+  } else {
+    lungVolumeWrap.style.display = "none";
+  }
+});
 
 const plotMass = [];
 let mass = 0;
