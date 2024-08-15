@@ -1,3 +1,8 @@
+function getUserLungVolume() {
+  const lungVolume = document.getElementById("userLungVolume");
+  return lungVolume.value;
+}
+
 export function insertUserPM25Breathed(mass) {
   const massResult = document.getElementById("massResult");
 
