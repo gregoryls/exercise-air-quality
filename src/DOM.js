@@ -1,4 +1,4 @@
-function getUserLungVolume() {
+export function getUserLungVolume() {
   const lungVolume = document.getElementById("userLungVolume");
   return lungVolume.value;
 }
