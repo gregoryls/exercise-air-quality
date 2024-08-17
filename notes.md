@@ -49,3 +49,5 @@ https://www.myhealthbeijing.com/china-public-health/a-day-in-beijing-is-like-smo
 | Ultra Apocalyptic   | 20,001-50,000  | 10,000,001-100,000,000      |
 | Hyper Apocalyptic   | 50,001-100,000 | 100,000,001-1,000,000,000   |
 | Mega Apocalyptic    | 100,001+       | 1,000,000,001-2,000,000,000 |
+
+since user is unlikely to know respiration rate on top of lung volume use custom volume to adjust calculated minute ventilation in the same way male/female is calculated---simply adjust by ratio. Standard male lung volume 6.0L
