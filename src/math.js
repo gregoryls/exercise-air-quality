@@ -2,19 +2,21 @@
 // PM2.5 = Particulate Matter 2.5 micrometer particles
 // Ve = Minute Ventilation, the amount of air breathed usually Liters/minute
 
+import { getUserLungVolume } from "./DOM";
+
 function calculateMinuteVentilationFromHeartRate(heartRate, modifier) {
   // return 0 by force to avoid issues with exp(0) = 1 giving a small minute ventilation from heart rate of zero
   if (heartRate === 0) return 0;
 
-  // // boolean for user selection of 'Female?' checkbox
-  // const checkFemale = document.getElementById("female").checked;
+  // boolean for user selection of 'Female?' checkbox
+  const checkFemale = document.getElementById("female").checked;
   const minuteVentilation = Math.exp(1.162 + 0.021 * heartRate);
 
   // convert standard Liters/minute units to m^3/minute to match with standard pm2.5 concentration units
   const minuteVentilationM3 = minuteVentilation / 1000;
 
   // women have lungs 75% the size of men - apply correction factor
-  if (modifier === "female") return minuteVentilationM3 * 0.75;
+  if (checkFemale) return minuteVentilationM3 * 0.75;
   // allow user to modify result by a ratio of their lung volume vs standard 6L volume for average male
   if (typeof modifier === "number") return minuteVentilationM3 * (modifier / 6);
   return minuteVentilationM3;
@@ -150,7 +152,8 @@ export function calculateUserPM25Mass(day) {
 
   // Resting Mass //
   const userRestingMinuteVolume = calculateMinuteVentilationFromHeartRate(
-    getUserRestingHeartRate()
+    getUserRestingHeartRate(),
+    getUserLungVolume()
   );
   const userRestingVolumeBreathed = calculateVolumeAirBreathed(
     userRestingMinuteVolume,
@@ -164,7 +167,8 @@ export function calculateUserPM25Mass(day) {
 
   // Exercise Mass //
   const userExerciseMinuteVolume = calculateMinuteVentilationFromHeartRate(
-    getUserExerciseHeartRate()
+    getUserExerciseHeartRate(),
+    getUserLungVolume()
   );
   const userExerciseVolumeBreathed = calculateVolumeAirBreathed(
     userExerciseMinuteVolume,
