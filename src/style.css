@@ -127,6 +127,9 @@ h2 {
 #calculatorInstructions h3 {
   margin-top: 0;
 }
+#lungDisclaimer {
+  margin-top: 0;
+}
 #calculatorInstructions ul li:not(:last-child) {
   margin-bottom: 10px;
 }
