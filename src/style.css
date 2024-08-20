@@ -1,3 +1,4 @@
+/* Main */
 body {
   background-color: #3a405a;
   display: flex;
@@ -19,7 +20,9 @@ h2 {
   flex-direction: column;
   gap: 20px;
 }
+/*  */
 
+/* Inputs */
 #inputForm {
   display: flex;
   flex-direction: column;
@@ -70,7 +73,9 @@ h2 {
   font-size: 16px;
   cursor: pointer;
 }
+/*  */
 
+/* Outputs */
 #calculatorOutput {
   background-color: #c5d995;
   color: #000000;
@@ -102,7 +107,9 @@ h2 {
 #relativeRisks ul li:not(:last-child) {
   margin-bottom: 10px;
 }
+/*  */
 
+/* Instructions */
 #calculatorInstructionsButton {
   /* align-self: baseline; */
 
@@ -133,7 +140,9 @@ h2 {
 #calculatorInstructions ul li:not(:last-child) {
   margin-bottom: 10px;
 }
+/*  */
 
+/* Plots */
 #plotContent {
   width: 100%;
 }
@@ -143,6 +152,7 @@ h2 {
   border-radius: 8px;
   margin-bottom: 20px;
 }
+/*  */
 
 #notesButton {
   padding: 5px;
@@ -158,6 +168,7 @@ h2 {
   background-color: #af837b;
 }
 
+/* Notes */
 #notes {
   display: none;
   background-color: #c5d995;
@@ -173,6 +184,7 @@ h2 {
 #notes ol li {
   font-size: 12px;
 }
+/*  */
 
 /* desktop styling */
 @media (min-width: 768px) {
@@ -199,3 +211,4 @@ h2 {
     width: 70%;
   }
 }
+/*  */
