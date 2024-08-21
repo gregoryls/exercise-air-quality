@@ -2,7 +2,10 @@
 // PM2.5 = Particulate Matter 2.5 micrometer particles
 // Ve = Minute Ventilation, the amount of air breathed usually Liters/minute
 
-import { getUserLungVolume } from "./DOM";
+function getUserLungVolume() {
+  const lungVolume = document.getElementById("userLungVolume");
+  return lungVolume.value;
+}
 
 function calculateMinuteVentilationFromHeartRate(heartRate, modifier) {
   // return 0 by force to avoid issues with exp(0) = 1 giving a small minute ventilation from heart rate of zero
