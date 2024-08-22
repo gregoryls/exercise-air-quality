@@ -4,7 +4,7 @@
 
 function getUserLungVolume() {
   const lungVolume = document.getElementById("userLungVolume");
-  return lungVolume.value;
+  return Number(lungVolume.value);
 }
 
 function calculateMinuteVentilationFromHeartRate(heartRate, modifier) {
