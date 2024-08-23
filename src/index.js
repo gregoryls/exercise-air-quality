@@ -7,6 +7,7 @@ import * as dom from "./DOM";
 // cleanup
 // organize index event listener code better
 // test lung volume modifier
+// fix lung volume on check, not change
 
 const instructionsButton = document.getElementById(
   "calculatorInstructionsButton"
@@ -62,12 +63,10 @@ submitButton.addEventListener("click", () => {
 const lungVolumeCheckbox = document.getElementById("lungVolumeCheckbox");
 const lungVolumeWrap = document.getElementById("lungVolumeWrap");
 lungVolumeCheckbox.addEventListener("change", () => {
-  if (
-    lungVolumeWrap.style.display === "none" ||
-    lungVolumeWrap.style.display === ""
-  ) {
+  if (lungVolumeCheckbox.checked) {
     lungVolumeWrap.style.display = "block";
-  } else {
+  }
+  if (!lungVolumeCheckbox.checked) {
     lungVolumeWrap.style.display = "none";
   }
 });
