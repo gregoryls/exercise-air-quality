@@ -8,6 +8,7 @@ import * as dom from "./DOM";
 // organize index event listener code better
 // test lung volume modifier
 // fix lung volume on check, not change
+// add total lung cancer/CVD deaths, or base rates for comparison to calc data
 
 const instructionsButton = document.getElementById(
   "calculatorInstructionsButton"
