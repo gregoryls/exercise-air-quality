@@ -5,6 +5,7 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
+    airConditionPollution: "./src/airConditionPollution.js",
     // math: "./src/math.js",
     // DOM: "./src/DOM.js",
   },
@@ -18,7 +19,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Excersize AQI",
       minify: false,
+      chunks: ["index"],
       template: "./src/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      title: "AC Pollution",
+      minify: false,
+      chunks: ["airConditionPollution"],
+      template: "./src/airConditionPollution.html",
     }),
   ],
   module: {
