@@ -7,3 +7,4 @@
 
 - Q = rate of heat flow (W)
 - ΔT = indoor - outdoor differential
+- U = heat transfer coefficient (W/(m<sup>2</sup>K))
