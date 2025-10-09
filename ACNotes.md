@@ -5,6 +5,6 @@
 
 ## useful terms
 
-- Q = rate of heat flow (W)
-- ΔT = indoor - outdoor differential
-- U = heat transfer coefficient (W/(m<sup>2</sup>K))
+- rateOfHeatFlow (Watts, commonly Q)
+- tempDifferential = indoor - outdoor differential
+- heatTransferCoefficient (W/(m<sup>2</sup>K), commonly U)
