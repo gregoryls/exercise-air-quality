@@ -13,5 +13,5 @@
 - airHeatCapacity (J _ kg<sup>-1</sup> _ K<sup>-1</sup>)
 - buildingVolume (m<sup>3</sup>)
 - airChangesPerHour
--
+- coefficientOfPerformance = cooling delivered (W)/eletrical input (W)
 - 1 kWh = 3.6×10^6 J
