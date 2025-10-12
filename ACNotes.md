@@ -9,6 +9,7 @@
 - tempDifferential = indoor - outdoor differential
 - heatTransferCoefficient (W/(m<sup>2</sup>K), commonly U)
 - area (m<sup>2</sup>)
+- volume (m<sup>3</sup>)
 - airDensity (kg \* m<sup>-2</sup>)
 - airHeatCapacity (J _ kg<sup>-1</sup> _ K<sup>-1</sup>)
 - buildingVolume (m<sup>3</sup>)
@@ -21,3 +22,8 @@
 - seasonal EER, SEER: cooling output in a season divided by total electrical input during same period
 - EER = 0.875 x SEER, simple residential conversion
 - EER = -0.02 x SEER<sup>2</sup> + 1.12 x SEER, not appropriate in all climates
+- solarHeatGainCoefficient, 0-1 based on window. lower blocks more heat
+- incidentSolarIrradiance (W x m<sup>-2</sup>, sun on window https://nsrdb.nrel.gov/ and https://power.larc.nasa.gov/)
+- volumetricFlow = (airChangesPerHour x volume)/3600 (m<sup>3</sup>/s)
+- massFlow = airDensity x volumetricFlow (kg/s)
+- infiltrationHeat = massFlow x airHeatCapacity x tempDifferential
