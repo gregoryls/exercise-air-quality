@@ -27,3 +27,6 @@
 - volumetricFlow = (airChangesPerHour x volume)/3600 (m<sup>3</sup>/s)
 - massFlow = airDensity x volumetricFlow (kg/s)
 - infiltrationHeat = massFlow x airHeatCapacity x tempDifferential
+- human at rest ~= 100W
+- home baseline ~= 1000W (huge variance, consider refining)
+- ignore latent cooling energy due to very low humidity environment, reasses for other areas (could be 50%+ of energy in highly humid hot places)
