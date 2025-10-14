@@ -8,3 +8,8 @@ function solarDeclinationAngle(day) {
   return 23.45 * Math.sin((2 * Math.PI * (284 + day)) / 365);
 }
 console.log(solarDeclinationAngle(81));
+
+function sunHourAngle(solarTime) {
+  // solar time in decimal hours, e.g. 1:30PM = 13.5 hours
+  return 15 * (solarTime - 12);
+}
