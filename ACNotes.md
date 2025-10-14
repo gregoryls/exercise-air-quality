@@ -30,3 +30,7 @@
 - human at rest ~= 100W
 - home baseline ~= 1000W (huge variance, consider refining)
 - ignore latent cooling energy due to very low humidity environment, reasses for other areas (could be 50%+ of energy in highly humid hot places)
+- houseWidth
+- houseLength
+- wallHeight
+-
