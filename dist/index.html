@@ -2,8 +2,313 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AC Pollution</title>
-  <script defer src="airConditionPollution.bundle.js"></script></head>
-  <body></body>
+    <title>Exercise AQI</title>
+  <script defer src="index.bundle.js"></script></head>
+  <body>
+    <header>
+      <h1>AQI Health Calculator</h1>
+    </header>
+    <div id="inputOutput">
+      <form onsubmit="return false" id="inputForm">
+        <h2>Input</h2>
+        <!-- onsubmit attribute prevents page reload on form submission -->
+        <div id="restExerciseWrap">
+          <div id="restingWrap">
+            <div class="input">
+              <label for="userHeartRate">Enter Resting Heart Rate:</label>
+              <input
+                type="number"
+                id="userHeartRate"
+                name="userHeartRate"
+                placeholder="80"
+                min="1"
+                max="500"
+                step="any"
+                required
+              />
+            </div>
+            <div class="input" id="lungVolumeWrap">
+              <label for="userLungVolume">Lung Volume (L):</label>
+              <input
+                type="number"
+                id="userLungVolume"
+                name="userLungVolume"
+                placeholder="6"
+                min="1"
+                step="any"
+              />
+            </div>
+            <!-- 80 is an average heart rate in the USA -->
+            <div class="input">
+              <label for="userAQI">Enter AQI:</label>
+              <input
+                type="number"
+                id="userAQI"
+                name="userAQI"
+                placeholder="40"
+                min="1"
+                max="10000"
+                step="any"
+                required
+              />
+            </div>
+            <div class="input">
+              <label for="userRestingDuration">Enter Hours Exposed:</label>
+              <input
+                type="number"
+                id="userRestingDuration"
+                name="userRestingDuration"
+                placeholder="24"
+                min="0"
+                step="any"
+                required
+              />
+            </div>
+          </div>
+          <div id="exerciseWrap">
+            <!-- <div>
+                <label for="exerciseToggle">Include Exercise?</label>
+                <input type="checkbox" id="exerciseToggle" name="exerciseToggle" />
+              </div> -->
+            <h3>Optional Exercise</h3>
+            <div class="input">
+              <label for="userExerciseHeartRate"
+                >Enter Exercise Heart Rate:</label
+              >
+              <input
+                type="number"
+                id="userExerciseHeartRate"
+                name="userExerciseHeartRate"
+                placeholder="140"
+                min="1"
+                max="500"
+                step="any"
+              />
+            </div>
+            <div class="input">
+              <label for="userExerciseDuration"
+                >Enter Exercise Duration (minutes):</label
+              >
+              <input
+                type="number"
+                id="userExerciseDuration"
+                name="userExerciseDuration"
+                placeholder="60"
+                value="0"
+                min="0"
+                step="any"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="gender">
+          <div>
+            <input type="radio" id="female" name="genderRadio" required />
+            <label for="female">Female</label>
+          </div>
+
+          <div>
+            <input type="radio" id="male" name="genderRadio" required />
+            <label for="male">Male</label>
+          </div>
+        </div>
+
+        <button id="submitData" type="submit">Calculate</button>
+      </form>
+
+      <div id="calculatorOutput">
+        <h2>Output</h2>
+        <div id="massCigaretteOutput">
+          <div id="massOutput">
+            <!-- change to h? -->
+            <p>Total PM2.5 breathed:</p>
+            <p id="massResult"></p>
+          </div>
+          <div id="cigarettePercentage">
+            <p>Percentage of cigarette breathed:</p>
+            <p id="cigarettePercentageResult"></p>
+          </div>
+        </div>
+        <div id="relativeRisks">
+          <p>
+            Relative risks for chronic exposure assuming consistent AQI, heart
+            rate, and exercise in a 24 hour period.
+          </p>
+          <ul>
+            <li id="test">Lung cancer mortality:</li>
+            <li id="test2">CVD mortality:</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button id="calculatorInstructionsButton">Show Instructions</button>
+
+    <div id="calculatorInstructions">
+      <h3>Using the calculator:</h3>
+      <ul>
+        <li>
+          In the input box, enter resting heart rate, the hours of exposure to
+          pm2.5 pollution, and the average AQI during that time. Optionally,
+          exercise exposure can be added with inclusion of average heart rate
+          for the exercise and it's duration. Gender is queried due to smaller
+          lung size in females.
+        </li>
+        <li>
+          <label for="lungVolumeCheckbox"
+            >If you know your exact lung volume, check this box:</label
+          >
+          <input type="checkbox" id="lungVolumeCheckbox" />
+          <p id="lungDisclaimer">
+            *Note, this feature is highly experimental and not based on
+            peer-reviewed research
+          </p>
+        </li>
+        <li>
+          The upper output box will show the pm2.5 mass breathed and what
+          percentage of a cigarrete that amounts to after calculating. This uses
+          the resting state data and adds on additional exercise data to
+          calculate total exposure.
+        </li>
+        <li>
+          The lower output box shows the relative risk of death due to lung
+          cancer or cardiovascular disease (including ischemic heart
+          disease(IHD) and cardiopulmonary disease(CPD)) compared to someone
+          with no pollution exposure. Relative risks are calculated assuming a
+          24 hour exposure period - first, any exercise duration is calculated
+          and then whatever amount of time remaining to reach 24 hours exposure
+          is calculated using resting state data.
+        </li>
+      </ul>
+    </div>
+
+    <div id="plotContent">
+      <div id="CVDPlot"></div>
+      <div id="lungCancerPlot"></div>
+    </div>
+
+    <button id="notesButton">Show Notes</button>
+
+    <div id="notes">
+      <h2>Notes</h2>
+      <ul>
+        <li>
+          Binary gender selector is present due to differing lung volumes;
+          calculations are altered to reflect female lungs having 75% the volume
+          of male lungs on average[1][2].
+          <ol>
+            <li>
+              Vogiatzis, Ioannis, Andrea Aliverti, Spyretta Golemati, Olga
+              Georgiadou, Antonella LoMauro, Epaminondas Kosmas, Emmanouil
+              Kastanakis, and Charis Roussos. “Respiratory Kinematics by
+              Optoelectronic Plethysmography during Exercise in Men and Women.”
+              European Journal of Applied Physiology 93, no. 5–6 (March 2005):
+              581–87.
+              <a href="https://doi.org/10.1007/s00421-004-1249-4"
+                >https://doi.org/10.1007/s00421-004-1249-4</a
+              >
+            </li>
+            <li>
+              Guenette, Jordan A., Jonathan D. Witt, Donald C. McKenzie, Jeremy
+              D. Road, and A. William Sheel. “Respiratory Mechanics during
+              Exercise in Endurance-Trained Men and Women: Respiratory
+              Mechanics.” The Journal of Physiology 581, no. 3 (June 15, 2007):
+              1309–22.
+              <a href="https://doi.org/10.1113/jphysiol.2006.126466"
+                >https://doi.org/10.1113/jphysiol.2006.126466</a
+              >
+            </li>
+          </ol>
+        </li>
+        <li>
+          While cigarettes and how they are smoked will vary, the standard value
+          for pm2.5 in one cigarette (equivalent to the amount of tar) is
+          12mg[1].
+          <ol>
+            <li>
+              Pope, C. Arden, Richard T. Burnett, Michelle C. Turner, Aaron
+              Cohen, Daniel Krewski, Michael Jerrett, Susan M. Gapstur, and
+              Michael J. Thun. “Lung Cancer and Cardiovascular Disease Mortality
+              Associated with Ambient Air Pollution and Cigarette Smoke: Shape
+              of the Exposure–Response Relationships.” Environmental Health
+              Perspectives 119, no. 11 (November 2011): 1616–21.
+              <a href="https://doi.org/10.1289/ehp.1103639"
+                >https://doi.org/10.1289/ehp.1103639</a
+              >
+            </li>
+          </ol>
+        </li>
+
+        <li>
+          Cigarette smoke particles are almost entirely under 1 micron in
+          size[1] and remain under 2.5 microns when accounting for humidity in
+          the throat[2].
+          <ol>
+            <li>
+              Anderson, Paula J., J. Douglas Wilson, and F. Charles Hiller.
+              “Particle Size Distribution of Mainstream Tobacco and Marijuana
+              Smoke: Analysis Using the Electrical Aerosol Analyzer.” American
+              Review of Respiratory Disease 140, no. 1 (July 1989): 202–5.
+              <a href="https://doi.org/10.1164/ajrccm/140.1.202"
+                >https://doi.org/10.1164/ajrccm/140.1.202</a
+              >
+            </li>
+            <li>
+              Ishizu, Y., K. Ohta, and T. Okada. “The Effect of Moisture on the
+              Growth of Cigarette Smoke Particles.” Beiträge Zur Tabakforschung
+              / Contributions to Tobacco Research 10, no. 3 (January 1, 1980).
+              <a href="https://doi.org/10.2478/cttr-2013-0486"
+                >https://doi.org/10.2478/cttr-2013-0486</a
+              >
+            </li>
+          </ol>
+        </li>
+        <li>
+          Minute Ventilation (liters of air breathed per minute) can be
+          accurately estimated based on heart rate[1]. The concentration of
+          PM2.5 can be calculated from AQI[2] and combined with exposure time
+          the total PM2.5 mass breathed in a time period can be calculated.
+          <ol>
+            <li>
+              Cruz, Ramon, Danilo L. Alves, Eduardo Rumenig, Renata Gonçalves,
+              Edson Degaki, Leonardo Pasqua, Sarah Koch, Adriano E. Lima-Silva,
+              Michael S. Koehle, and Romulo Bertuzzi. “Estimation of Minute
+              Ventilation by Heart Rate for Field Exercise Studies.” Scientific
+              Reports 10, no. 1 (January 29, 2020): 1423.
+              <a href="https://doi.org/10.1038/s41598-020-58253-7"
+                >https://doi.org/10.1038/s41598-020-58253-7</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.epa.gov/outdoor-air-quality-data/how-aqi-calculated"
+                >https://www.epa.gov/outdoor-air-quality-data/how-aqi-calculated</a
+              >
+            </li>
+          </ol>
+        </li>
+        <li>
+          What about acute exposure? It is difficult to measure the effects of
+          short-term exposure, but there is evidence that a change of 10μg/m^3
+          pm2.5 concentration (equivalent to AQI 40->67, varies over AQI range)
+          over a two day period results in a 1.009 relative risk for all-cause
+          mortality[1].
+          <ol>
+            <li>
+              Achilleos, Souzana, Marianthi-Anna Kioumourtzoglou, Chih-Da Wu,
+              Joel D. Schwartz, Petros Koutrakis, and Stefania I. Papatheodorou.
+              “Acute Effects of Fine Particulate Matter Constituents on
+              Mortality: A Systematic Review and Meta-Regression Analysis.”
+              Environment International 109 (December 2017): 89–100.
+              <a href="https://doi.org/10.1016/j.envint.2017.09.010"
+                >https://doi.org/10.1016/j.envint.2017.09.010</a
+              >
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

@@ -26,6 +26,7 @@ module.exports = {
       title: "AC Pollution",
       minify: false,
       chunks: ["airConditionPollution"],
+      filename: "airConditionPollution.html",
       template: "./src/airConditionPollution.html",
     }),
   ],
