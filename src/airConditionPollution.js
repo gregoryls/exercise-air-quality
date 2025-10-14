@@ -4,6 +4,7 @@ import "./style.css";
 // feet2 to m2 conversion
 
 function solarDeclinationAngle(day) {
-  return Math.sin((2 * Math.PI * (284 + day)) / 365);
+  // takes numerical day starting from Jan 1 = 1. returns angle in degrees.
+  return 23.45 * Math.sin((2 * Math.PI * (284 + day)) / 365);
 }
-console.log(solarDeclinationAngle(10));
+console.log(solarDeclinationAngle(81));
