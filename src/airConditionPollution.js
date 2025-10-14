@@ -9,7 +9,8 @@ function solarDeclinationAngle(day) {
 }
 console.log(solarDeclinationAngle(81));
 
-function sunHourAngle(solarTime) {
+function sunHourAngle(localTime, localLongitude, standardMeridian) {
   // solar time in decimal hours, e.g. 1:30PM = 13.5 hours
-  return 15 * (solarTime - 12);
+  // longitudes in degrees to calculate offset from the timezone standard
+  return 15 * (localTime + (standardMeridian - localLongitude) / 15 - 12);
 }
