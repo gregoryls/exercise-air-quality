@@ -3,6 +3,14 @@ import "./style.css";
 // TODO
 // feet2 to m2 conversion
 
+function degreeToRadian(degree) {
+  return degree * (Math.PI / 180);
+}
+
+function radianToDegree(radian) {
+  return radian * (180 / Math.PI);
+}
+
 function solarDeclinationAngle(day) {
   // takes numerical day starting from Jan 1 = 1. returns angle in degrees.
   return 23.45 * Math.sin((2 * Math.PI * (284 + day)) / 365);
@@ -20,5 +28,6 @@ function sunHourAngle(localTime, localLongitude, standardMeridian) {
   // slc = -111.84, standard = -105
   // solar time in decimal hours, e.g. 1:30PM = 13.5 hours
   // longitudes in degrees to calculate offset from the timezone standard
+  // returns angle in degrees
   return 15 * (localTime + (standardMeridian - localLongitude) / 15 - 12);
 }
