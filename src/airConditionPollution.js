@@ -24,10 +24,17 @@ function equationOfTime(day, year) {
   return minuteOffset;
 }
 
-function sunHourAngle(localTime, localLongitude, standardMeridian) {
+function solarHourAngle(localTime, localLongitude, standardMeridian) {
   // slc = -111.84, standard = -105
   // solar time in decimal hours, e.g. 1:30PM = 13.5 hours
   // longitudes in degrees to calculate offset from the timezone standard
   // returns angle in degrees
   return 15 * (localTime + (standardMeridian - localLongitude) / 15 - 12);
+}
+
+function solarZenithAngle(localLatitude, hourAngle, declination) {}
+
+function solarAltitudeAngle(zenith) {
+  // takes zenith in degrees, returns in degrees
+  return 90 - zenith;
 }
