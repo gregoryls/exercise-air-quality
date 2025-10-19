@@ -32,7 +32,16 @@ function solarHourAngle(localTime, localLongitude, standardMeridian) {
   return 15 * (localTime + (standardMeridian - localLongitude) / 15 - 12);
 }
 
-function solarZenithAngle(localLatitude, hourAngle, declination) {}
+function solarZenithAngle(localLatitude, hourAngle, declination) {
+  // takes args in degrees, returns zenith angle in radians
+  const radLatitude = degreeToRadian(localLatitude);
+  const radHourAngle = degreeToRadian(hourAngle);
+  const radDeclination = degreeToRadian(declination);
+  return Math.acos(
+    Math.sin(radLatitude) * Math.sin(radDeclination) +
+      Math.cos(radLatitude) * Math.cos(radDeclination) * Math.cos(radHourAngle)
+  );
+}
 
 function solarAltitudeAngle(zenith) {
   // takes zenith in degrees, returns in degrees
