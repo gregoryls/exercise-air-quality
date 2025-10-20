@@ -47,3 +47,5 @@ function solarAltitudeAngle(zenith) {
   // takes zenith in degrees, returns in degrees
   return 90 - zenith;
 }
+
+function solarAzimuthAngle ()

@@ -33,4 +33,5 @@
 - houseWidth
 - houseLength
 - wallHeight
-- solarDeclinationAngle (cooper paper), ignore equation of time east/west variance
+- solarDeclinationAngle (cooper paper),
+- solarAzimuthAngle (zhang paper)
