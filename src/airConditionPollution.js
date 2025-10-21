@@ -48,4 +48,14 @@ function solarAltitudeAngle(zenith) {
   return 90 - zenith;
 }
 
-function solarAzimuthAngle ()
+function solarAzimuthAngle(localLatitude, hourAngle, declination) {
+  // takes args in degrees, returns azimuth angle in radians
+  const radLatitude = degreeToRadian(localLatitude);
+  const radHourAngle = degreeToRadian(hourAngle);
+  const radDeclination = degreeToRadian(declination);
+
+  const unitVectorX = -1 * Math.cos(radDeclination) * Math.sin(radHourAngle);
+  const unitVectorY =
+    Math.sin(radDeclination) * Math.cos(radLatitude) -
+    Math.cos(radDeclination) * Math.cos(radHourAngle) * Math.sin(radLatitude);
+}
