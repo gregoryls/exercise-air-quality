@@ -58,4 +58,8 @@ function solarAzimuthAngle(localLatitude, hourAngle, declination) {
   const unitVectorY =
     Math.sin(radDeclination) * Math.cos(radLatitude) -
     Math.cos(radDeclination) * Math.cos(radHourAngle) * Math.sin(radLatitude);
+
+  // (x,y) gives north-clockwise, (-x,-y) south-clockwise, (y,x) east-counterclockwise
+  const azimuth = Math.atan2(unitVectorX, unitVectorY);
+  return azimuth;
 }
