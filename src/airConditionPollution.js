@@ -63,3 +63,14 @@ function solarAzimuthAngle(localLatitude, hourAngle, declination) {
   const azimuth = Math.atan2(unitVectorX, unitVectorY);
   return azimuth;
 }
+
+function angleOfIncidence(
+  solarZenithAngle,
+  solarAzimuthAngle,
+  surfaceTiltAngle,
+  surfaceAzimuthAngle
+) {
+  // take solar inputs in radians, surface inputs in degrees.
+  const radSurfaceTilt = degreeToRadian(surfaceTiltAngle);
+  const radSurfaceAzimuth = degreeToRadian(surfaceAzimuthAngle);
+}
