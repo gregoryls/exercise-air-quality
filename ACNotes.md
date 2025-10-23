@@ -24,6 +24,7 @@
 - EER = -0.02 x SEER<sup>2</sup> + 1.12 x SEER, not appropriate in all climates
 - solarHeatGainCoefficient, 0-1 based on window. lower blocks more heat
 - incidentSolarIrradiance (W x m<sup>-2</sup>, sun on window https://nsrdb.nrel.gov/ and https://power.larc.nasa.gov/)
+  - beamIrradiance = directNormalIrradiance \* max(0,cos(angleOfIncidence))
 - volumetricFlow = (airChangesPerHour x volume)/3600 (m<sup>3</sup>/s)
 - massFlow = airDensity x volumetricFlow (kg/s)
 - infiltrationHeat = massFlow x airHeatCapacity x tempDifferential
@@ -35,3 +36,4 @@
 - wallHeight
 - solarDeclinationAngle (cooper paper),
 - solarAzimuthAngle (zhang paper)
+-
