@@ -36,14 +36,14 @@
 - wallHeight
 - solarDeclinationAngle (cooper paper),
 - solarAzimuthAngle (zhang paper)
-- | Surface Type                     | Color / Finish    | Solar Absorptance (α) | Emissivity (ε) | Typical (h_o) (W/m²·K) | **ΔT (°C)** at 600 W/m² | **ΔT (°C)** at 800 W/m² | Notes                                 |
+  | Surface Type | Color / Finish | Solar Absorptance (α) | Emissivity (ε) | Typical (h_o) (W/m²·K) | **ΔT (°C)** at 600 W/m² | **ΔT (°C)** at 800 W/m² | Notes |
   | -------------------------------- | ----------------- | --------------------- | -------------- | ---------------------- | ----------------------- | ----------------------- | ------------------------------------- |
-  | **Painted wall – white / light** | matte             | 0.25 – 0.35           | 0.9            | 20–25                  | 6 – 10                  | 8 – 14                  | Common light exterior paint or stucco |
-  | **Painted wall – medium**        | beige / gray      | 0.5 – 0.6             | 0.9            | 20–25                  | 12 – 18                 | 16 – 24                 | Typical residential siding color      |
-  | **Painted wall – dark**          | brown / dark gray | 0.8 – 0.9             | 0.9            | 20–25                  | 19 – 27                 | 25 – 36                 | Very dark, nearly black paint         |
-  | **Asphalt shingle roof**         | dark gray / black | 0.85 – 0.95           | 0.9            | 25–30                  | 17 – 23                 | 23 – 31                 | Most residential roofs                |
-  | **Metal roof (bare aluminum)**   | shiny             | 0.25 – 0.3            | 0.1 – 0.2      | 25–35                  | 4 – 7                   | 5 – 10                  | Reflective but low emissivity         |
-  | **Metal roof (painted)**         | colored           | 0.6 – 0.8             | 0.8 – 0.9      | 25–35                  | 10 – 19                 | 13 – 25                 | Typical colored metal roofing         |
-  | **Concrete / masonry wall**      | natural gray      | 0.55 – 0.65           | 0.9            | 20–25                  | 13 – 19                 | 17 – 25                 | Common exterior finish                |
-  | **White membrane roof**          | cool roof coating | 0.2 – 0.3             | 0.9            | 25–35                  | 3 – 7                   | 4 – 9                   | “Cool roof” technology                |
-  | **Bituminous flat roof**         | black             | 0.9 – 0.95            | 0.9            | 25–35                  | 15 – 22                 | 20 – 30                 | Old commercial black roofs            |
+  | **Painted wall – white / light** | matte | 0.25 – 0.35 | 0.9 | 20–25 | 6 – 10 | 8 – 14 | Common light exterior paint or stucco |
+  | **Painted wall – medium** | beige / gray | 0.5 – 0.6 | 0.9 | 20–25 | 12 – 18 | 16 – 24 | Typical residential siding color |
+  | **Painted wall – dark** | brown / dark gray | 0.8 – 0.9 | 0.9 | 20–25 | 19 – 27 | 25 – 36 | Very dark, nearly black paint |
+  | **Asphalt shingle roof** | dark gray / black | 0.85 – 0.95 | 0.9 | 25–30 | 17 – 23 | 23 – 31 | Most residential roofs |
+  | **Metal roof (bare aluminum)** | shiny | 0.25 – 0.3 | 0.1 – 0.2 | 25–35 | 4 – 7 | 5 – 10 | Reflective but low emissivity |
+  | **Metal roof (painted)** | colored | 0.6 – 0.8 | 0.8 – 0.9 | 25–35 | 10 – 19 | 13 – 25 | Typical colored metal roofing |
+  | **Concrete / masonry wall** | natural gray | 0.55 – 0.65 | 0.9 | 20–25 | 13 – 19 | 17 – 25 | Common exterior finish |
+  | **White membrane roof** | cool roof coating | 0.2 – 0.3 | 0.9 | 25–35 | 3 – 7 | 4 – 9 | “Cool roof” technology |
+  | **Bituminous flat roof** | black | 0.9 – 0.95 | 0.9 | 25–35 | 15 – 22 | 20 – 30 | Old commercial black roofs |

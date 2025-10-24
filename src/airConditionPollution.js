@@ -65,12 +65,21 @@ function solarAzimuthAngle(localLatitude, hourAngle, declination) {
 }
 
 function angleOfIncidence(
-  solarZenithAngle,
-  solarAzimuthAngle,
+  solZenithAngle,
+  solAzimuthAngle,
   surfaceTiltAngle,
   surfaceAzimuthAngle
 ) {
   // take solar inputs in radians, surface inputs in degrees.
   const radSurfaceTilt = degreeToRadian(surfaceTiltAngle);
   const radSurfaceAzimuth = degreeToRadian(surfaceAzimuthAngle);
+
+  const incidenceAngle = Math.acos(
+    Math.cos(solZenithAngle) * Math.cos(radSurfaceTilt) +
+      Math.sin(solZenithAngle) *
+        Math.sin(radSurfaceTilt) *
+        Math.cos(solAzimuthAngle - radSurfaceAzimuth)
+  );
+
+  return incidenceAngle;
 }
