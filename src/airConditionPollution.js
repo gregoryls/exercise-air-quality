@@ -84,4 +84,15 @@ function cosineAngleOfIncidence(
   return cosineIncidenceAngle;
 }
 
+function directBeamIrradiance (directNormalIrradiance, cosIncidenceAngle) {
+  // directNormalIrradiance from data, in W/m2
+
+  if (cosIncidenceAngle < 0) {
+    // negative value means the sun is behind the surface in question
+    return 0;
+  }
+  const irradiance = directNormalIrradiance * cosIncidenceAngle;
+
+  return irradiance;
+}
 function globalHorizontalIrradiance ()
