@@ -70,21 +70,21 @@ function cosineAngleOfIncidence(
   surfaceTiltAngle,
   surfaceAzimuthAngle
 ) {
-  // take solar inputs in radians, surface inputs in degrees, 
+  // take solar inputs in radians, surface inputs in degrees,
   // returns cosine of the incidence angle
   const radSurfaceTilt = degreeToRadian(surfaceTiltAngle);
   const radSurfaceAzimuth = degreeToRadian(surfaceAzimuthAngle);
 
-  const cosineIncidenceAngle = 
+  const cosineIncidenceAngle =
     Math.cos(solZenithAngle) * Math.cos(radSurfaceTilt) +
-      Math.sin(solZenithAngle) *
-        Math.sin(radSurfaceTilt) *
-        Math.cos(solAzimuthAngle - radSurfaceAzimuth);
+    Math.sin(solZenithAngle) *
+      Math.sin(radSurfaceTilt) *
+      Math.cos(solAzimuthAngle - radSurfaceAzimuth);
 
   return cosineIncidenceAngle;
 }
 
-function directBeamIrradiance (directNormalIrradiance, cosIncidenceAngle) {
+function directBeamIrradiance(directNormalIrradiance, cosIncidenceAngle) {
   // directNormalIrradiance from data, in W/m2
 
   if (cosIncidenceAngle < 0) {
@@ -95,4 +95,18 @@ function directBeamIrradiance (directNormalIrradiance, cosIncidenceAngle) {
 
   return irradiance;
 }
-function globalHorizontalIrradiance ()
+
+function groundReflectionIrradiance(
+  directBeam,
+  diffuse,
+  groundAlbedo,
+  surfaceTiltAngle
+) {
+  // total irradiance on the ground, times albedo,
+  // adjusted for how much the surface 'sees' due to tilt angle
+  const ground =
+    (directBeam + diffuse) *
+    groundAlbedo *
+    ((1 - Math.cos(surfaceTiltAngle)) / 2);
+}
+function totalIrradiance() {}
