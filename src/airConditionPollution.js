@@ -109,4 +109,7 @@ function groundReflectionIrradiance(
     groundAlbedo *
     ((1 - Math.cos(surfaceTiltAngle)) / 2);
 }
-function totalIrradiance() {}
+function totalIrradiance(directBeam, diffuse, groundReflected) {
+  const total = directBeam + diffuse + groundReflected;
+  return total;
+}
